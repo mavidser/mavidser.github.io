@@ -1,0 +1,40 @@
+name: deploy
+
+on:
+  push:
+    branches: [ source ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install hugo
+      run: |
+        echo "Installing Hugo"
+        mkdir -p /tmp/hugo/
+        curl -L https://github.com/gohugoio/hugo/releases/download/v0.66.0/hugo_extended_0.66.0_Linux-64bit.tar.gz | tar -zxf - --directory /tmp/hugo/
+    - name: Run hugo
+      run: |
+        git submodule update --init --recursive
+        /tmp/hugo/hugo version
+        echo $PWD
+        /tmp/hugo/hugo --minify --verbose --destination /tmp/output
+    - name: Commit files
+      run: |
+        git config --local user.email "me@sidverma.io"
+        git config --local user.name "Sid Verma"
+        git checkout -b master
+        ls | xargs rm -rf
+        cp -r /tmp/output/* ./
+        git add .
+        git commit -m "Update website"
+        git show-ref
+    - name: Push to github
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git remote add publisher https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        git push publisher master --force
