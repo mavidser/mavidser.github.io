@@ -24,8 +24,8 @@ jobs:
         /tmp/hugo/hugo --minify --verbose --destination /tmp/output
     - name: Commit files
       run: |
-        git config --local user.email "me@sidverma.io"
-        git config --local user.name "Sid Verma"
+        git config --local user.email "actions@github.com"
+        git config --local user.name "github-actions"
         git checkout -b master
         ls | xargs rm -rf
         cp -r /tmp/output/* ./
