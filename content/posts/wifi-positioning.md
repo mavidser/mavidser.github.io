@@ -12,11 +12,11 @@ Alice also faces an a peculiar amount of problems with her GPS. She could be at 
 
 For most people, device positioning is synonymous with GPS. But these days, GPS is the last thing a smartphone checks when trying to locate itself. GPS takes some time to obtain a good fix, and drains a lot of battery. In contrasts, a lot of your phone radios are less power-hungry and always on. Mostly, it's a combination of cellular, bluetooth and Wi-Fi. Basically, the signal strength from different cell towers help triangulate your approximate location. Some BLE devices can also advertise their location to nearby devices.
 
-Apart from these, Companies lik eGoogle/Apple/Microsoft/Skyhook maintain a huge list of `(Wi-Fi SSID + MAC) => Location` combinations to find your location. You might have noticed your phone telling you to switch on Wi-Fi for more accurate positioning at somep point. This is why. This method quite is power efficient, and quick. And in most cases, very accurate.
+Apart from these, Companies like Google/Apple/Microsoft/Skyhook maintain a huge list of `(Wi-Fi SSID + MAC) => Location` combinations to find your location. You might have noticed your phone telling you to switch on Wi-Fi for more accurate positioning at some point. This is why. This method quite is power efficient, and quick. And in most cases, very accurate.
 
 _Note: This is one of the primary uses of [Google Location Service][google-location-service] on Android._
 
-In out character's case though, Alice's wifi router normally always resides on her desk, at her home. The device has the MAC Address `AB:CD:EF:GH:IJ:KL`. It's boring SSID is `Alice's Wifi`. Now, a lot of smartphones around her will be reporting this MAC+SSID combination to some server, along with their location. Her, her guests, her neighbours, almost everyone. They don't need to be connected to the network. Her router getting scanned is enough.
+In our character's case though, Alice's wifi router normally always resides on her desk, at her home. The device has the MAC Address `AB:CD:EF:GH:IJ:KL`. It's boring SSID is `Alice's Wifi`. Now, a lot of smartphones around her will be reporting this MAC+SSID combination to some server, along with their location. Alice, her guests, her neighbours, almost everyone around her. They don't need to be connected to the network. Her router getting scanned is enough.
 
 So, when travelling with the said hotspot on in her purse, if she tries using some location-requiring app, her phone gets wrong/conflicting location data. Depending on the neighboring conditions (the GPS strength, other Wi-Fi networks nearby, etc), she may see her actual location, or her far-away home, or even jumping between the currnt position and her home.
 

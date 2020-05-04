@@ -12,7 +12,7 @@ Quick recap: I dropped my Oneplus 3 six months ago - didn't get it repaired for 
 
 Eventually, I did go back to the smartphone - to order cabs, read important emails, and take photographs.
 
-But this really made me miss the bliss of not owning a smartphone. In the previous month, I used to look at the tiny screen for a maxium of 5 total minutes every day. On the smartphone, that returned to a few hours - Reddit, Twitter, Telegram, Whatsapp, Instagram, Facebook, Kindle, Google Chrome.
+But this really made me miss the bliss of not owning a smartphone. In the previous month, I used to look at the tiny screen for a maximum of 5 minutes every day. Now when I'm back on the smartphone, the screen-time is also back to a few hours - Reddit, Twitter, Telegram, Whatsapp, Instagram, Facebook, Kindle, Google Chrome.
 
 Also came with it, a lot of micro-interruptions throughout the day in the form of notifications - IMs, promotions, emails, etc. An average of 15 notifications every day.
 
