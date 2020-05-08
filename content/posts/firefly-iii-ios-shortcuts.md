@@ -43,6 +43,6 @@ After spending 3 hours creating these 150-step shortcuts on a very tiny screen, 
 [list-accounts]: https://www.icloud.com/shortcuts/aae6683ea5124212b3eebc10a187ba34
 [list-categories]: https://www.icloud.com/shortcuts/e03cc6c24f4e4f6092a4cea2cc35ded0
 [add-transaction]: https://www.icloud.com/shortcuts/876597bf952c44daaf01b3a28ca89512
-[list-accounts-screenshot]: /public/images/firefly-ios-shortcuts/list-accounts-screenshot.jpg
-[list-categories-screenshot]: /public/images/firefly-ios-shortcuts/list-categories-screenshot.jpg
-[add-transaction-screenshot]: /public/images/firefly-ios-shortcuts/add-transaction-screenshot.jpg
+[list-accounts-screenshot]: /images/firefly-ios-shortcuts/list-accounts-screenshot.jpg
+[list-categories-screenshot]: /images/firefly-ios-shortcuts/list-categories-screenshot.jpg
+[add-transaction-screenshot]: /images/firefly-ios-shortcuts/add-transaction-screenshot.jpg
