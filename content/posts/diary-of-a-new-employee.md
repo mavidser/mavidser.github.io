@@ -6,7 +6,7 @@ tags: ["Movies & TV"]
 
 #### Monday
 
-Today was my first day at this stealth startup. The boss (the CEO) is a dick, but we're building great stuff. The physical entertainment/tourism industry is a huge market, and it's very possible that we're going to be the next Disneyworld.
+Today was my first day at this stealth startup. The boss (CEO) is a dick, but we're building great stuff. The physical entertainment/tourism industry is a huge market, and it's very possible that we're going to be the next Disneyworld.
 
 #### Tuesday
 
@@ -16,7 +16,7 @@ In other news, I met the rest of the systems team today. I was expecting to go t
 
 #### Wednesday
 
-We got news that some outside "experts" would be coming in over the weekend for inspection. Most likely in response to the concerns of the investors and the insurance company. VCs are sending this mathematician who deals with risk-prediction models (I think?). On the other hand, John, our CEO, is also bringing in some famous academics who'd likely give us the required endorsement without much fuss.
+We got news that some outside "experts" would be coming in over the weekend for inspection. Most likely in response to the concerns of investors and the insurance company over the lawsuit. VCs are sending this mathematician who deals with risk-prediction models (I think?). On the other hand, John, our CEO, is also bringing in some famous academics who'd likely give us the required endorsement without much fuss.
 
 Got to know more of my team today. Ray's the cheif engineer. Good guy, heavy smoker. We really need a policy against smoking indoors here. This is not the 80s. Dennis turned out to be a bit of an ass though. There's a lot of misplaced ego in him for building the system foundation.
 
@@ -32,7 +32,7 @@ Today we spent most of the day preparing for the visitors tomorrow. Mostly maint
 
 #### Saturday
 
-My shift just ended, and it's been a smooth day so far. The family turned out to be little kids (John's grandchildren, I assume). Johm insists that they are just visiting him, but I suspect he brought them in to try and butter up the experts. A lot is riding on their endorsements, and seeing kids experience the rides might give them a more positive outlook.
+My shift just ended, and it's been a smooth day so far. The family turned out to be little kids (John's grandchildren, I assume). John insists that they are just visiting him, but I suspect he brought them in to try and butter up the experts. A lot is riding on their endorsements, and seeing kids experience the rides might give them a more positive outlook.
 
 The tour had more kinks than we were expecting today. Ray's been counting every glitch that he comes across today, and was up to 151 the last time I checked. "We have all the problems of a major theme park and a major zoo and the computers aren't even on their feet yet", his exact words.
 
