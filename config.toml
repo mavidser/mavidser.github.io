@@ -33,7 +33,7 @@ _My previous employers are <a href="https://www.tower-research.com" target="_bla
   [[params.links]]
     [[params.links.link]]
       name = "Resume"
-      href = "/SidVerma.Resume.pdf"
+      href = "/resume"
     [[params.links.link]]
       name = "Email"
       href = "/contact"
