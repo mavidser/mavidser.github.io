@@ -21,9 +21,9 @@ summaryLength = 0
   email = "me@sidverma.io"
   smart_email_link = ["Email"]
   about = """
-Hi. I'm **Sid**. Some people also know me as Siddhartha.
+Hi. I'm **Sid**. I write software code for a living.
 
-I write software code for a living. For living, I take photographs, hike and bike across mountains, and explore filmmaking.
+Interested in humor, filmmaking, and a decentralised internet.
 
 _I'm currently available for hire. Feel free to reach out if you think we might work well together._
 <br>
@@ -41,18 +41,16 @@ _My previous employers are <a href="https://www.tower-research.com" target="_bla
 
   [[params.links]]
     [[params.links.link]]
+      name = "Posts"
+      href = "/posts"
+    [[params.links.link]]
+      name = "Photos"
+      href = "/photos"
+    [[params.links.link]]
       name = "Github"
       href = "https://github.com/mavidser"
       new_tab = true
     [[params.links.link]]
-      name = "Mastodon"
-      href = "https://mastodon.social/@mavidser"
-      new_tab = true
-    [[params.links.link]]
       name = "Twitter"
       href = "https://twitter.com/mavidser"
-      new_tab = true
-    [[params.links.link]]
-      name = "Instagram"
-      href = "https://instagram.com/mavidser"
       new_tab = true
