@@ -1,0 +1,33 @@
+<!doctype html><html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Mathematical operations on objects in javascript. · Sid Verma</title><link rel=stylesheet href=/css/rocinante.css><link rel="shortcut icon" href=/icons/favicon.ico><body><header><h2><a href=https://sidverma.io/>‹ Sid Verma</a></h2></header><main><div class=post><div class=title-group><div class=title><h1>Mathematical operations on objects in javascript.</h1></div><div class=date><h5>Aug 11, 2018</h5></div></div><article class=content><p><em>All of these were executed on Node.js 6.9.1</em></p><pre><code>&gt; [] + []
+''
+</code></pre><p>Obviously.</p><pre><code>&gt; [] + {}
+'[object Object]'
+</code></pre><p>Less obvious, but okay.</p><pre><code>&gt; {} + []
+0
+</code></pre><p>Huh?</p><pre><code>&gt; {} + {}
+'[object Object][object Object]'
+</code></pre><p>Oh, fuck off.</p><p>I&rsquo;d rather just add strings to these from now on:</p><pre><code>&gt; [] + ''
+''
+</code></pre><pre><code>&gt; [] + '1'
+'1'
+</code></pre><pre><code>&gt; [] + 'a'
+'a'
+</code></pre><pre><code>&gt; {} + ''
+0
+</code></pre><pre><code>&gt; {} + '1'
+1
+</code></pre><pre><code>&gt; {} + 'a'
+NaN
+</code></pre><p>Lol.</p><p>Okay, subtraction maybe:</p><pre><code>&gt; [] - []
+0
+</code></pre><pre><code>&gt; {} - {}
+NaN
+</code></pre><pre><code>&gt; [] - ''
+''
+</code></pre><pre><code>&gt; [] - '1'
+-1
+</code></pre><pre><code>&gt; [] - {}
+NaN
+</code></pre><p>FML.</p><p>But, my favorite one is this:</p><pre><code>&gt; {} - []
+-0
+</code></pre><p>Follow-up post: <a href=/2018/08/16/minimal-npm-packages/>Minimalistic javascript packages</a></p></article><div class=tags><span title=Tags>🏷</span><div class="horizontal-links links"><a href=/tags/programming/>Programming</a><a href=/tags/javascript/>Javascript</a></div></div></article></main><footer><div class=content-container><div class=content><p>Hi. I&rsquo;m <strong>Sid</strong>. I write software code for a living.</p><p>Interested in humor, filmmaking, and a decentralised internet.</p><p><em>I&rsquo;m a mostly committed as a consultant at the moment. But still feel free to reach out if you think we might work well together. :)</em><br><em>My employment history includes <a href=https://opencraft.com>Opencraft</a>, <a href=https://mclarencollege.in>McLaren College</a>, <a href=https://www.tower-research.com target=_blank>Tower Research Capital</a>, <a href=https://www.culturealley.com target=_blank>CultureAlley</a> and <a href=https://www.smallcase.com target=_blank>Smallcase</a> to name a few.</em></p><p class=horizontal-links><a href=/resume>Resume</a><a href=/contact class=email-hook id=about-email title="Click to show email">Email</a></p><p class=horizontal-links><a href=/posts>Posts</a><a href=/photos>Photos</a><a href=https://github.com/mavidser target=_blank>Github</a><a href=https://twitter.com/mavidser target=_blank>Twitter</a></p></div></div></footer><script>const emailId=atob("bWVAc2lkdmVybWEuaW8=");</script><script src=/js/rocinante.min.js></script></body></html>

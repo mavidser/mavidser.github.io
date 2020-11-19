@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Technology on Sid Verma</title><link>https://sidverma.io/tags/technology/</link><description>Recent content in Technology on Sid Verma</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 06 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://sidverma.io/tags/technology/index.xml" rel="self" type="application/rss+xml"/><item><title>Kodi controllers</title><link>https://sidverma.io/2019/07/06/inattentional-blindness/</link><pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate><guid>https://sidverma.io/2019/07/06/inattentional-blindness/</guid><description>&lt;p>For the past five years, a Raspberry Pi, running &lt;a href="https://kodi.tv/" target="_blank">Kodi&lt;/a>, has been attached to my TV. The Pi, TV and the software all get updated time to time, but the overall setup has been the same for most of it.&lt;/p>
+&lt;pre>&lt;code>+----+ +----+ +-----+
+| TV |----(HDMI)----| Pi |--(USB/DLNA)--| HDD |
++----+ +----+ +-----+
+&lt;/code>&lt;/pre>&lt;p>Controllers I&amp;rsquo;ve used for Kodi over the years -&lt;/p>
+&lt;ul>
+&lt;li>Desktop Keyboards (Wired/Wireless)&lt;/li>
+&lt;li>Wireless Mouse&lt;/li>
+&lt;li>Web Interface&lt;/li>
+&lt;li>Tasker scenes utilizing the web interface API&lt;/li>
+&lt;li>Kodi remote apps (for Android/iOS)&lt;/li>
+&lt;li>Emulated keyboard over SSH&lt;/li>
+&lt;li>VNC&lt;/li>
+&lt;li>Arduino based bluetooth remote&lt;/li>
+&lt;li>Game controllers&lt;/li>
+&lt;/ul>
+&lt;p>Some of these were novelty ones, others were used because of circumstantial needs+availability.&lt;/p>
+&lt;p>My primary controller is the excellent app &lt;a href="https://play.google.com/store/apps/details?id=org.leetzone.android.yatsewidgetfree" target="_blank">Yatse&lt;/a> (Lets you browse/play media on the phone itself - much faster than the TV UI). When the phone&amp;rsquo;s not nearby, or there&amp;rsquo;s a guest involved, I use a game controller (connected for retroPie anyway).&lt;/p>
+&lt;p>Last week, I was setting up Kodi (&lt;a href="https://osmc.tv/" target="_blank">OSMC&lt;/a> to be exact) on my old roommate&amp;rsquo;s Raspberry Pi. While I was installing Yatse on his phone, this other guy present there, who isn&amp;rsquo;t familiar with the software, doesn&amp;rsquo;t have any of the controller I know of, starts browsing movies on the TV. I look over, dumbfounded, and see him casually using the TV remote to play around in the UI.&lt;/p>
+&lt;p>Five years of having a &lt;a href="https://en.wikipedia.org/wiki/Consumer_Electronics_Control" target="_blank">CEC&lt;/a>-compatible TV with a CEC-compatible SBC, and it never dawned on me to try the simplest UI possible - The TV remote.&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/IGQmdoK_ZfY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;br></description></item><item><title>Wi-Fi positioning woes</title><link>https://sidverma.io/2017/07/12/wifi-positioning/</link><pubDate>Wed, 12 Jul 2017 00:00:00 +0000</pubDate><guid>https://sidverma.io/2017/07/12/wifi-positioning/</guid><description>&lt;p>Alice lives in India. She has super-cheap cellular internet (less than $0.2/GB on some networks). Cheap enough for it to be her daily driver, using &lt;a href="http://www.amazon.in/D-Link-DWR-720-HSPA-Mobile-Router/dp/B00PVD1RV2" target="_blank">a&lt;/a> &lt;a href="https://www.amazon.com/Hotspot-Unlocked-Worldwide-Huawei-E5220s-6/dp/B06XJ5NF8W/" target="_blank">number&lt;/a> &lt;a href="https://www.amazon.com/Verizon-Wireless-LTE-Prepaid-Smartphone/dp/B014RJJXUW/" target="_blank">of&lt;/a> &lt;a href="https://www.amazon.com/Hotspot-Unlocked-MF65-Router-Mobile/dp/B01KGCMUQ8/" target="_blank">portable&lt;/a> Wi-Fi routers, which just sit on her desk. And since it is so cheap and portable and convenient and long-lasting, she just carries it everywhere in her purse, wherever she travels.&lt;/p>
+&lt;p>Alice also faces an a peculiar amount of problems with her GPS. She could be at a crowded bus station, trying to get an Uber, or stuck in a storm, again trying to get a cab, her phone just fails to locate her correctly long enough for the app to work. Either it&amp;rsquo;ll just be showing her previous location at the far away house, or it will keep fluctuating and jumping between her actual position, and her house. People around her sometimes get affected too. Maybe it&amp;rsquo;s a curse.&lt;/p></description></item></channel></rss>
