@@ -1,7 +1,7 @@
 ---
 title: Personal infrastructure overview
 date: 2020-01-11
-tags: ["Odyssey", "Me"]
+tags: ["Homelab", "Me"]
 ---
 
 Writing intros to posts is such a hard thing. I've spent more time on what to write in this paragraph than the rest of this article. You're supposed to start with a background and a motivation, and conclude with a sentence that you finally did it, and here is how.
