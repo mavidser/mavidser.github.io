@@ -13,6 +13,8 @@ Lately, I've been rebuilding this infrastructure, and one of the things I was du
 I spent a good amount of time trying out a bunch of methods, until settling on one. This post runs through all the options I found, and why I chose what I chose. I won't go into how to set it up - there should be plenty of articles and documentation on the internet.
 TLDR: I now use tailscale with a headscale server.
 
+<!--more-->
+
 ---
 
 ### Wireguard
