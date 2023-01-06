@@ -4,7 +4,7 @@ date: 2023-01-03
 tags: ["Homelab", "Programming"]
 ---
 
-I have a nice little computer in my house which hosts a bunch of services I use. It sits behind a NAT, so I can't connect directly to it via my public IP address.
+I have a nice little computer in my house which hosts a bunch of services I use. It sits behind a NAT, so I can't connect directly to it via my public IP address. Hence, I use a cheap cloud instance on DigitalOcean to act as the gateway for my home-server to the internet.
 
 My [previous setup][previous-setup] was basically a VPN tunnel between a cloud server and my home server, where the cloud server forwarded TCP traffic to my home server, which served all my services.
 
