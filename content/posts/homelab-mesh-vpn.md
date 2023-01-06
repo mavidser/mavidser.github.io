@@ -1,5 +1,5 @@
 ---
-title: Comparing tools for connecting all your devices in a mesh VPN
+title: Comparing tools to connect all your devices in a mesh VPN
 date: 2023-01-03
 tags: ["Homelab", "Programming"]
 ---
