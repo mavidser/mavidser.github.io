@@ -16,10 +16,10 @@ summaryLength = 0
     unsafe= true
 
 [params]
+  mode = "light"
   favicon = "/icons/favicon.ico"
   mainSections = ["posts", "photos"]
   email = "me@sidverma.io"
-  smart_email_link = ["Email"]
   about = """
 Hi. I'm **Sid**. I write software code for a living.
 
