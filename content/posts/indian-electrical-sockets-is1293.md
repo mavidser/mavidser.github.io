@@ -1,5 +1,5 @@
 ---
-title: "IS 1293 : What are the different kind of Indian electrical sockets?"
+title: "IS 1293 : What are the different kinds of Indian electrical sockets?"
 date: 2023-03-07
 tags: ["Technology"]
 ---
