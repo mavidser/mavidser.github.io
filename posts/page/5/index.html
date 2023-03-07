@@ -1,0 +1,37 @@
+<!doctype html><html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Posts · Sid Verma</title><link rel=stylesheet href=/css/rocinante.css><link rel="shortcut icon" href=/icons/favicon.ico><link rel=alternate type=application/rss+xml href=https://sidverma.io/posts/index.xml title="Sid Verma"><body><header><h2><a href=https://sidverma.io/>‹ Sid Verma</a></h2></header><main><div class=combined-title-pagination><h1>Posts</h1><h3 class=current-page>Page 5</h3></div><hr><article class=post-list><div class=title-group><div class=title><h1><a href=/2019/07/06/inattentional-blindness/>Kodi controllers</a></h1></div><div class=date><h5>Jul 06, 2019</h5></div></div class="title-group"><div class=content><p>For the past five years, a Raspberry Pi, running <a href=https://kodi.tv/ target=_blank>Kodi</a>, has been attached to my TV. The Pi, TV and the software all get updated time to time, but the overall setup has been the same for most of it.</p><pre><code>+----+              +----+              +-----+
+| TV |----(HDMI)----| Pi |--(USB/DLNA)--| HDD |
++----+              +----+              +-----+
+</code></pre><p>Controllers I&rsquo;ve used for Kodi over the years -</p><ul><li>Desktop Keyboards (Wired/Wireless)</li><li>Wireless Mouse</li><li>Web Interface</li><li>Tasker scenes utilizing the web interface API</li><li>Kodi remote apps (for Android/iOS)</li><li>Emulated keyboard over SSH</li><li>VNC</li><li>Arduino based bluetooth remote</li><li>Game controllers</li></ul><p>Some of these were novelty ones, others were used because of circumstantial needs+availability.</p><p>My primary controller is the excellent app <a href="https://play.google.com/store/apps/details?id=org.leetzone.android.yatsewidgetfree" target=_blank>Yatse</a> (Lets you browse/play media on the phone itself - much faster than the TV UI). When the phone&rsquo;s not nearby, or there&rsquo;s a guest involved, I use a game controller (connected for retroPie anyway).</p><p>Last week, I was setting up Kodi (<a href=https://osmc.tv/ target=_blank>OSMC</a> to be exact) on my old roommate&rsquo;s Raspberry Pi. While I was installing Yatse on his phone, this other guy present there, who isn&rsquo;t familiar with the software, doesn&rsquo;t have any of the controller I know of, starts browsing movies on the TV. I look over, dumbfounded, and see him casually using the TV remote to play around in the UI.</p><p>Five years of having a <a href=https://en.wikipedia.org/wiki/Consumer_Electronics_Control target=_blank>CEC</a>-compatible TV with a CEC-compatible SBC, and it never dawned on me to try the simplest UI possible - The TV remote.</p><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe src=https://www.youtube.com/embed/IGQmdoK_ZfY style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe></div><br></div></article><article class=post-list><div class=title-group><div class=title><h1><a href=/2018/08/16/minimal-npm-packages/>Minimalistic npm packages.</a></h1></div><div class=date><h5>Aug 16, 2018</h5></div></div class="title-group"><div class=content><p>A follow up to <a href=/2018/08/11/javascript-mathematical-operations/>my previous post</a>, this time we look into some of the lesser known, but widely used javascript packages.</p><p>Javascript&rsquo;s NPM package manager, is one of the <a href=http://www.modulecounts.com/ target=_blank>biggest and fastest growing</a> package manager out there. As of writing this:</p><ul><li>RubyGems - 145,675 (25 new packages/day)</li><li>PyPI - 149,111 (104 new packages/day)</li><li>Packagist - 191,577 (103 new packages/day)</li><li>Maven Central - 244,143 (149 new packages/day)</li><li><strong>npm - 679,009 (508 new packages/day)</strong></li></ul><p>Minimalism doesn&rsquo;t only apply to design, lifestyle and ownership, but also to code. Here are some of the most minimal packages in npm:</p></div><div class=read-more><a href=/2018/08/16/minimal-npm-packages/>Read more ›</a></div></article><article class=post-list><div class=title-group><div class=title><h1><a href=/2018/08/11/javascript-mathematical-operations/>Mathematical operations on objects in javascript.</a></h1></div><div class=date><h5>Aug 11, 2018</h5></div></div class="title-group"><div class=content><p><em>All of these were executed on Node.js 6.9.1</em></p><pre><code>&gt; [] + []
+''
+</code></pre><p>Obviously.</p><pre><code>&gt; [] + {}
+'[object Object]'
+</code></pre><p>Less obvious, but okay.</p><pre><code>&gt; {} + []
+0
+</code></pre><p>Huh?</p><pre><code>&gt; {} + {}
+'[object Object][object Object]'
+</code></pre><p>Oh, fuck off.</p><p>I&rsquo;d rather just add strings to these from now on:</p><pre><code>&gt; [] + ''
+''
+</code></pre><pre><code>&gt; [] + '1'
+'1'
+</code></pre><pre><code>&gt; [] + 'a'
+'a'
+</code></pre><pre><code>&gt; {} + ''
+0
+</code></pre><pre><code>&gt; {} + '1'
+1
+</code></pre><pre><code>&gt; {} + 'a'
+NaN
+</code></pre><p>Lol.</p><p>Okay, subtraction maybe:</p><pre><code>&gt; [] - []
+0
+</code></pre><pre><code>&gt; {} - {}
+NaN
+</code></pre><pre><code>&gt; [] - ''
+''
+</code></pre><pre><code>&gt; [] - '1'
+-1
+</code></pre><pre><code>&gt; [] - {}
+NaN
+</code></pre><p>FML.</p><p>But, my favorite one is this:</p><pre><code>&gt; {} - []
+-0
+</code></pre><p>Follow-up post: <a href=/2018/08/16/minimal-npm-packages/>Minimalistic javascript packages</a></p></div></article><div class=paginator><a href=/posts/page/6/ class=older>« Older posts</a>
+<a href=/posts/page/4/ class=newer>Newer posts »</a></div></main><footer></footer><script>const emailId=atob("bWVAc2lkdmVybWEuaW8=");</script><script src=/js/rocinante.min.js></script></body></html>
