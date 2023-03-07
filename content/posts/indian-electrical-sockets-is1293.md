@@ -16,7 +16,7 @@ Indian electrical sockets are defined by the **IS 1293** specification, as defin
 
 The standard specifies the details of plugs and sockets used for household devices (devices which draw up to 16A current). The standard goes into details about almost every aspect of the plugs and sockets, but this article cares only about the different socket layouts.
 
-Plugs and sockets are rated for three current classes in India - 2.5A, 6A, and 16A. There used to be a 10A class as well, but that has since been removed in the 2019 revision (it shared the same socket layout at 6A). All these sockets operate at upto 250V.
+Plugs and sockets are rated for three current classes in India - 2.5A, 6A, and 16A. There used to be a 10A class as well, but that has since been removed in the 2019 revision (it shared the same socket layout as 6A). All these sockets operate at up to 250V.
 
 Now, onto the different sockets shown in the image above:
 
