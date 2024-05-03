@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Javascript on Sid Verma</title><link>https://sidverma.io/tags/javascript/</link><description>Recent content in Javascript on Sid Verma</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 16 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://sidverma.io/tags/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>Minimalistic npm packages.</title><link>https://sidverma.io/2018/08/16/minimal-npm-packages/</link><pubDate>Thu, 16 Aug 2018 00:00:00 +0000</pubDate><guid>https://sidverma.io/2018/08/16/minimal-npm-packages/</guid><description>&lt;p>A follow up to &lt;a href="https://sidverma.io/2018/08/11/javascript-mathematical-operations/">my previous post&lt;/a>, this time we look into some of the lesser known, but widely used javascript packages.&lt;/p>
+&lt;p>Javascript&amp;rsquo;s NPM package manager, is one of the &lt;a href="http://www.modulecounts.com/" target="_blank">biggest and fastest growing&lt;/a> package manager out there. As of writing this:&lt;/p>
+&lt;ul>
+&lt;li>RubyGems - 145,675 (25 new packages/day)&lt;/li>
+&lt;li>PyPI - 149,111 (104 new packages/day)&lt;/li>
+&lt;li>Packagist - 191,577 (103 new packages/day)&lt;/li>
+&lt;li>Maven Central - 244,143 (149 new packages/day)&lt;/li>
+&lt;li>&lt;strong>npm - 679,009 (508 new packages/day)&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Minimalism doesn&amp;rsquo;t only apply to design, lifestyle and ownership, but also to code. Here are some of the most minimal packages in npm:&lt;/p></description></item><item><title>Mathematical operations on objects in javascript.</title><link>https://sidverma.io/2018/08/11/javascript-mathematical-operations/</link><pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate><guid>https://sidverma.io/2018/08/11/javascript-mathematical-operations/</guid><description>&lt;p>&lt;em>All of these were executed on Node.js 6.9.1&lt;/em>&lt;/p>
+&lt;pre>&lt;code>&amp;gt; [] + []
+''
+&lt;/code>&lt;/pre>&lt;p>Obviously.&lt;/p>
+&lt;pre>&lt;code>&amp;gt; [] + {}
+'[object Object]'
+&lt;/code>&lt;/pre>&lt;p>Less obvious, but okay.&lt;/p>
+&lt;pre>&lt;code>&amp;gt; {} + []
+0
+&lt;/code>&lt;/pre>&lt;p>Huh?&lt;/p>
+&lt;pre>&lt;code>&amp;gt; {} + {}
+'[object Object][object Object]'
+&lt;/code>&lt;/pre>&lt;p>Oh, fuck off.&lt;/p>
+&lt;p>I&amp;rsquo;d rather just add strings to these from now on:&lt;/p>
+&lt;pre>&lt;code>&amp;gt; [] + ''
+''
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&amp;gt; [] + '1'
+'1'
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&amp;gt; [] + 'a'
+'a'
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&amp;gt; {} + ''
+0
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&amp;gt; {} + '1'
+1
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&amp;gt; {} + 'a'
+NaN
+&lt;/code>&lt;/pre>&lt;p>Lol.&lt;/p>
+&lt;p>Okay, subtraction maybe:&lt;/p>
+&lt;pre>&lt;code>&amp;gt; [] - []
+0
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&amp;gt; {} - {}
+NaN
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&amp;gt; [] - ''
+''
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&amp;gt; [] - '1'
+-1
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&amp;gt; [] - {}
+NaN
+&lt;/code>&lt;/pre>&lt;p>FML.&lt;/p>
+&lt;p>But, my favorite one is this:&lt;/p>
+&lt;pre>&lt;code>&amp;gt; {} - []
+-0
+&lt;/code>&lt;/pre>&lt;p>Follow-up post: &lt;a href="https://sidverma.io/2018/08/16/minimal-npm-packages/">Minimalistic javascript packages&lt;/a>&lt;/p></description></item></channel></rss>
