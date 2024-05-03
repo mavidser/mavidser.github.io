@@ -21,11 +21,11 @@ summaryLength = 0
   mainSections = ["posts", "photos"]
   email = "me@sidverma.io"
   about = """
-Hi. I'm **Sid**. I write software code for a living.
+Hi. I'm **Sid**. I write software for a living.
 
-Interested in humor, filmmaking, and a decentralized internet.
+Interested in humor, filmmaking, and a decentralized and accessible internet.
 
-_I'm actively looking for work right now. Feel free to have a look at my resume below, and the rest of this website._
+_I'm always looking to work on interesting projects. Feel free to have a look at my resume below, and the rest of this website to get a feel for my interests._
 <br>
 _My employment history includes <a href="https://shortform.com">Shortform</a>, <a href="https://opencraft.com">Opencraft</a>, <a href="https://mclarencollege.in">McLaren College</a>, <a href="https://www.tower-research.com" target="_blank">Tower Research Capital</a>, <a href="https://www.culturealley.com" target="_blank">CultureAlley</a> and <a href="https://www.smallcase.com" target="_blank">Smallcase</a> to name a few._
 """
