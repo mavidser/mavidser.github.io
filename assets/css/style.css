@@ -1,0 +1,6 @@
+main > p > strong {
+    background: linear-gradient(to right, #7e8ecc, #bc12d5, #b30707);
+    background-clip: border-box;
+    background-clip: text;
+    color: transparent;
+}

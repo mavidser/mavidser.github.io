@@ -17,17 +17,20 @@ summaryLength = 0
 
 [params]
   mode = "light"
+  customCSS = ["/css/style.css"]
   favicon = "/icons/favicon.ico"
+  socialBanner = "/icons/banner.png"
   mainSections = ["posts", "photos"]
   email = "me@sidverma.io"
   about = """
-Hi. I'm **Sid**. I write software for a living.
+Hi friend. I'm **Sid**!
 
-Interested in humor, filmmaking, and a decentralized and accessible internet.
+This is my home on the internet. Come, have a tour. Please leave your shoes at the door.
 
-_I'm always looking to work on interesting projects. Feel free to have a look at my resume below, and the rest of this website to get a feel for my interests._
+I work with technology for a living - mostly as a software engineer. Some details are available in the resume below. In addition, I'm interested in filmmaking, tinkering with electronics, and building a decentralized internet. _Feel free to reach out if you'd like to work together._
+
+I also like trees.
 <br>
-_My employment history includes <a href="https://shortform.com">Shortform</a>, <a href="https://opencraft.com">Opencraft</a>, <a href="https://mclarencollege.in">McLaren College</a>, <a href="https://www.tower-research.com" target="_blank">Tower Research Capital</a>, <a href="https://www.culturealley.com" target="_blank">CultureAlley</a> and <a href="https://www.smallcase.com" target="_blank">Smallcase</a> to name a few._
 """
 
   [[params.links]]
