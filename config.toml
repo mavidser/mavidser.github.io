@@ -16,7 +16,7 @@ summaryLength = 0
     unsafe= true
 
 [params]
-  mode = "light"
+  colorScheme = "auto"
   customCSS = ["/css/style.css"]
   favicon = "/icons/favicon.ico"
   socialBanner = "/icons/banner.png"

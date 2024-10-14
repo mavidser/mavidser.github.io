@@ -4,3 +4,19 @@ main > p > strong {
     background-clip: text;
     color: transparent;
 }
+
+:root[data-color-scheme="dark"] main > p > strong {
+    background: linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
+    background-clip: border-box;
+    background-clip: text;
+    color: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root[data-color-scheme="auto"] main > p > strong {
+        background: linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
+        background-clip: border-box;
+        background-clip: text;
+        color: transparent;
+    }
+}
