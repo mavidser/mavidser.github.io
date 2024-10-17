@@ -10,8 +10,8 @@ summaryLength = 0
 
 [markup]
   [markup.highlight]
-    style = "monokailight"
     tabWidth = 2
+    noClasses = false
   [markup.goldmark.renderer]
     unsafe= true
 
