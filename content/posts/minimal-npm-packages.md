@@ -1,7 +1,7 @@
 ---
 title: Minimalistic npm packages.
 date: 2018-08-16
-tags: ["Programming", "Javascript"]
+tags: ["tech"]
 ---
 
 A follow up to [my previous post][prev-post], this time we look into some of the lesser known, but widely used javascript packages.

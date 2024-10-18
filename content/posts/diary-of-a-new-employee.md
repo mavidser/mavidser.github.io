@@ -1,7 +1,7 @@
 ---
 title: Diary of a new employee
 date: 2020-05-04
-tags: ["Movies & TV"]
+tags: ["humor"]
 ---
 
 #### Monday

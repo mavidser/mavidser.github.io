@@ -1,7 +1,8 @@
 ---
 title: "Meta:Programming - Notes about the nature of software development"
 date: 2020-06-01T00:00:00
-tags: ["Programming"]
+tags: ["tech"]
+hidden: true
 ---
 
 I'm hoping to write a blog series for my younger self. He is someone who used to look at a service and say - "I could build that over a weekend". This is also someone who would look at a company with a small product, which rarely gets any new features, and wonder why that product needs 10 developers working fulltime on it.

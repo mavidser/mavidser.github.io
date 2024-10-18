@@ -1,7 +1,7 @@
 ---
 title: "Decision making while writing software"
 date: 2020-06-01T01:00:00
-tags: ["Programming"]
+tags: ["tech"]
 ---
 
 _Post #1 in the [Meta:Programming][meta-programming] series._

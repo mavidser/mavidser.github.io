@@ -1,7 +1,7 @@
 ---
 title: Moving to an iPhone (for now)
 date: 2019-12-04
-tags: ["iOS", "Mobile"]
+tags: ["tech"]
 ---
 I spent the last two days trying to switch from my three year old Oneplus 3, to a brand new iPhone 11. I thought I was probably done with expensive phones (I count Oneplus as an expensive purchase), but resigned to giving iOS a chance this time around.
 

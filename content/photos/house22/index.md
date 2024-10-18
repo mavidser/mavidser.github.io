@@ -2,7 +2,6 @@
 title: House tour
 date: 2022-12-01
 location: Goa, India
-display_date: Sep 2022
 tags: ["House"]
 footer: Tried to buy nothing new except wires and electrical junctions. Please excuse the dust, I am not really bothered by it.
 banner: 5-Pano.jpg

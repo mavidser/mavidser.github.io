@@ -1,7 +1,7 @@
 ---
 title: Kodi controllers
 date: 2019-07-06
-tags: ["Technology"]
+tags: ["tech"]
 ---
 For the past five years, a Raspberry Pi, running [Kodi][kodi], has been attached to my TV. The Pi, TV and the software all get updated time to time, but the overall setup has been the same for most of it.
 

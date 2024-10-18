@@ -1,7 +1,7 @@
 ---
 title: The internet kind of sucks now.
 date: 2018-04-10
-tags: ["Internet"]
+tags: ["tech"]
 ---
 
 _This is mostly a rant, over my increasing frustration with how the internet works nowadays. Maybe it's just nostalgia with rose-colored glasses. I still want to shout this here in this void._

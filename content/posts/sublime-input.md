@@ -1,7 +1,7 @@
 ---
 title:  "STDIN inputs via Sublime Text (sort of)"
 date: 2015-01-03
-tags: ["Programming"]
+tags: ["tech"]
 ---
 
 I love Sublime Text. I really do. I can put a ring on it if it had any corporeal form. I've been using it so much, that trying to work on anything else is kind of a pain. And yet, when dealing with STDIN inputs, the magic falters. This method describes a workaround to give inputs without a prompt.

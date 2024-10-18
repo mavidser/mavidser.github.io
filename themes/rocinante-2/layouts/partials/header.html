@@ -1,0 +1,9 @@
+{{ if and (.IsHome) (not (.Scratch.Get "pagenumber")) }}
+  <h2>
+    <a class="site-title site-title-index">› {{ .Site.Title }}</a>
+  </h2>
+{{ else }}
+  <h2>
+    <a class="site-title" href="{{ .Site.BaseURL }}">‹ {{ .Site.Title }}</a>
+  </h2>
+{{ end }}

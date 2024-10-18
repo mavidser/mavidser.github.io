@@ -1,7 +1,7 @@
 ---
 title:  Hillhacks and Hackbeach
 date: 2017-10-10
-tags: ["Conference", "Travel", "Hillhacks", "Hackbeach"]
+tags: ["tech", "Conferences", "Travel"]
 ---
 
 Hillhacks, [as defined by the website][hillhacks]:

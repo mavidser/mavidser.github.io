@@ -1,0 +1,14 @@
+{{ .Site.Params.about | .RenderString }}
+
+{{ range $links := .Site.Params.links }}
+  <p class="horizontal-links">
+    {{- range $links.link -}}
+      <a href="{{ .href }}"
+       {{ if .newTab }} target="_blank" {{end}}
+       {{ if .specialEmailLink }} class="email-hook" id="about-email" title="Click to show email" {{end}}
+      >
+        {{- .name -}}
+      </a>
+    {{- end -}}
+  </p>
+{{ end }}

@@ -1,7 +1,7 @@
 ---
 title: Eight months of unemployment and traveling
 date: 2019-11-19
-tags: ["Travel", "Me"]
+tags: ["Travel"]
 ---
 In March 2019, I left my job at [Tower Research Capital][trc], to take a small break from work and live aimlessly for a while. My mental health had been declining steadily for the last few years, and going away for a while seemed like the only way out.
 <!--more-->

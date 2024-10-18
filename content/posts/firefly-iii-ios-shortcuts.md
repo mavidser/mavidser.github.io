@@ -1,7 +1,7 @@
 ---
 title: iOS Shortcuts for Firefly III
 date: 2019-12-06
-tags: ["iOS", "Mobile"]
+tags: ["tech"]
 ---
 
 I've been using the excellent [Firefly III][firefly] to manage my expenses for a while. As a result, I have developed a habit to actively monitor every transaction I do, which, in my opinion is a much better way than using other automated expense managers which can only track your non-cash expenses, without a lot of context.

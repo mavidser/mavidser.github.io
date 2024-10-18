@@ -1,7 +1,7 @@
 ---
 title: "Website Updates"
 date: 2020-03-07
-tags: ["Me", "Programming"]
+tags: ["tech"]
 ---
 
 Every once in a while, I get into this productivity slump where I don't write code for weeks, and it gets hard to get back into the rhythm of working again. For me, the easiest way out of it is to redesign this website. It's low-effort (relatively), gets some creative juices flowing and has little risk of not panning out ultimately.

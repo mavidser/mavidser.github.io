@@ -2,8 +2,7 @@
 title: (Hillhikes and) Hillhacks 2019
 date: 2019-05-01
 location: Himachal Pradesh, India
-display_date: May-June 2019
-tags: ["Travel", "Conference", "Hillhacks"]
+tags: ["Travel", "Conferences"]
 footer: Shot on Nikon D5300 and Oneplus 3
 banner: DSC_0061.jpg
 ---

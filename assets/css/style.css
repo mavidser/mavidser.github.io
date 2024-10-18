@@ -1,22 +1,70 @@
-main > p > strong {
-    background: linear-gradient(to right, #7e8ecc, #bc12d5, #b30707);
-    background-clip: border-box;
-    background-clip: text;
-    color: transparent;
+.sway {
+    animation: sway 0.33s ease-in-out infinite normal;
+    /* animation: sway 5s ease-out infinite normal; */
+    display: inline-block;
 }
 
-:root[data-color-scheme="dark"] main > p > strong {
+@keyframes sway {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    16.7% {
+        transform: translate(-0.5px, -0.5px) rotate(3deg);
+    }
+    33.4% {
+        transform: translate(-0.5px, 0.5px) rotate(-3deg);
+    }
+    50% {
+        transform: translate(0, 0) rotate(0deg) scale(1.1);
+    }
+    67.7% {
+        transform: translate(0.5px, -0.5px) rotate(-3deg);
+    }
+    84.4% {
+        transform: translate(0.5px, 0.5px) rotate(3deg);
+    }
+}
+
+
+/* .site-title {
+    background: var(--gradient);
+    background-clip: text;
+    background-size: 200% auto;
+    animation: shine 1s linear infinite;
+    color: transparent !important;
+    display: inline-block;
+}
+.site-title:hover {
+    background: var(--gradient);
+    background-clip: text;
+    background-size: 200% auto;
+    animation: shine 1s linear infinite;
+    color: transparent !important;
+    display: inline-block;
+}
+.site-title:active {
+    color: #00000033 !important;
+}
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+:root[data-color-scheme="dark"] .site-title {
     background: linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
     background-clip: border-box;
     background-clip: text;
     color: transparent;
+    display: inline-block;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root[data-color-scheme="auto"] main > p > strong {
+    :root[data-color-scheme="auto"] .site-title {
         background: linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
         background-clip: border-box;
         background-clip: text;
         color: transparent;
+        display: inline-block;
     }
-}
+} */

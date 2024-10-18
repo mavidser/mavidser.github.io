@@ -1,7 +1,7 @@
 ---
 title: "IS 1293 : What are the different kinds of Indian electrical sockets?"
 date: 2023-03-07
-tags: ["Technology"]
+tags: ["tech"]
 ---
 
 I spent a lot of time today reading the specifications of Indian electrical sockets, and since it took me way too long to find this information - here's a quick summary of what the different kinds of sockets mean. I hope at least one other person finds this useful.

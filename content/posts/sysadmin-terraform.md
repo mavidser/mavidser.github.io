@@ -1,7 +1,7 @@
 ---
 title: Doing sysadmin things through Terraform
 date: 2019-11-15
-tags: ["Homelab", "Programming"]
+tags: ["homelab", "tech"]
 ---
 
 _Disclaimer: I have not worked as a sysadmin anywhere in my professional life, nor do I consider myself to be very good at it._

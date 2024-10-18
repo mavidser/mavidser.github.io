@@ -1,7 +1,7 @@
 ---
 title:  Dumb smartphone is the best smartphone.
 date: 2018-01-04
-tags: ["Mobile"]
+tags: ["tech"]
 ---
 
 Quick recap: I dropped my Oneplus 3 six months ago - didn't get it repaired for a month. Instead, carried this $10 phone with me for a while.

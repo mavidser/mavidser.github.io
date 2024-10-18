@@ -1,7 +1,7 @@
 ---
 title: Mathematical operations on objects in javascript.
 date: 2018-08-11
-tags: ["Programming", "Javascript"]
+tags: ["tech"]
 ---
 
 _All of these were executed on Node.js 6.9.1_

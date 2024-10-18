@@ -1,7 +1,7 @@
 ---
 title:  Link etiquettes for web developers.
 date: 2017-08-02
-tags: ["Programming"]
+tags: ["tech"]
 ---
 
 This post might seem like nitpicking, or unnecessary to a lot of people, but it's frustrating when links don't work how they're expected to.

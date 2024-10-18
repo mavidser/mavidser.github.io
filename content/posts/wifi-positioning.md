@@ -1,7 +1,7 @@
 ---
 title:  "Wi-Fi positioning woes"
 date: 2017-07-12
-tags: ["Technology"]
+tags: ["tech"]
 ---
 
 Alice lives in India. She has super-cheap cellular internet (less than $0.2/GB on some networks). Cheap enough for it to be her daily driver, using [a][0] [number][1] [of][2] [portable][3] Wi-Fi routers, which just sit on her desk. And since it is so cheap and portable and convenient and long-lasting, she just carries it everywhere in her purse, wherever she travels.

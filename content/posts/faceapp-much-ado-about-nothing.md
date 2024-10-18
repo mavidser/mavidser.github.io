@@ -1,7 +1,7 @@
 ---
 title: Russians are harvesting our faces!
 date: 2019-07-19
-tags: ["Internet"]
+tags: ["tech"]
 ---
 
 <br>

@@ -1,7 +1,7 @@
 ---
 title: Comparing tools to connect your devices in a mesh VPN
 date: 2023-01-03
-tags: ["Homelab", "Programming"]
+tags: ["homelab", "tech"]
 ---
 
 I have a nice little computer in my house which hosts a bunch of services I use. It sits behind a NAT, so I can't connect directly to it via my public IP address. Hence, I use a cheap cloud instance on DigitalOcean to act as the gateway for my home-server to the internet.
