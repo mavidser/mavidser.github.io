@@ -5,13 +5,9 @@
         <div class="title-group-solo">
             <a href="{{ .RelPermalink }}">
             {{ if eq .Type "photos" }}
-            <span class="date">{{ .Params.date.Format "2006 Jan" }}</span>
-            <span class="label">
-                &nbsp;📸&nbsp;
-            </span>
+                <span class="date">{{ .Params.date.Format "2006 Jan" }}</span>
+                <span class="label">&nbsp;📸&nbsp;</span>
             {{ else }}
-                <span class="label">
-                </span>
                 <span class="date">{{ .Params.date.Format "2006 Jan 02" }}</span>
             {{ end }}
             <span class="title">

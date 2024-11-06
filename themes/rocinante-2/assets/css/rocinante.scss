@@ -266,6 +266,10 @@ header h2 {
       font-family: monospace;
       padding-right: 5px;
     }
+    .label {
+      margin-left: -5px;
+      margin-right: 5px;
+    }
 
     &:hover {
       color: var(--title-color);
