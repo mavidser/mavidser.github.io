@@ -2,7 +2,7 @@
 title: Ziro Festival 2018
 date: 2018-09-01
 location: Ziro, Arunachal Pradesh, India
-tags: ["Travel"]
+tags: ["travel"]
 footer: Shot on Nikon D5300
 banner: DSC_0655.jpg
 ---

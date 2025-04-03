@@ -2,7 +2,7 @@
 title: Week in Goa
 date: 2019-01-01
 location: Arambol, Goa, India
-tags: ["Travel"]
+tags: ["travel"]
 footer: Shot on Nikon D5300 and Oneplus 3
 banner: DSC_0274.jpg
 ---

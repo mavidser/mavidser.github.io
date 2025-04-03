@@ -2,7 +2,7 @@
 title: Hackbeach 2018
 date: 2018-11-01
 location: Gokarna, Karnataka, India
-tags: ["Travel", "Conferences"]
+tags: ["travel", "conferences"]
 footer: Shot on Nikon D5300
 banner: DSC_0327.jpg
 ---

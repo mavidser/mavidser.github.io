@@ -2,7 +2,7 @@
 title: Hackbeach 2017
 date: 2017-11-01
 location: Gokarna, Karnataka, India
-tags: ["Travel", "Conferences"]
+tags: ["travel", "conferences"]
 footer: Shot on Oneplus 3
 banner: 06.jpg
 ---

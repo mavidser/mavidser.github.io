@@ -2,7 +2,7 @@
 title: Road trip to Jaisalmer
 date: 2018-01-01
 location: Rajasthan, India
-tags: ["Travel"]
+tags: ["travel"]
 footer: Shot on Nikon D5300
 banner: DSC_0014.NEF.jpg
 ---

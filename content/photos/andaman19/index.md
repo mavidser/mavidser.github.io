@@ -2,7 +2,7 @@
 title: Andaman Islands
 date: 2019-06-01
 location: Port Blair, Andaman Islands, India
-tags: ["Travel"]
+tags: ["travel"]
 footer: Shot on Nikon D5300 and Oneplus 3
 banner: DSC_0428.jpg
 ---

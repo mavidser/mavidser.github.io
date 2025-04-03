@@ -2,7 +2,7 @@
 title: Hillhacks 2018
 date: 2018-05-01
 location: Bir, Himachal Pradesh, India
-tags: ["Travel", "Conferences"]
+tags: ["travel", "conferences"]
 footer: Shot on Nikon D5300 and Oneplus 3
 banner: DSC_0054.jpg
 ---
