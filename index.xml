@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sid Verma</title><link>https://sidverma.io/</link><description>Recent content on Sid Verma</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 03 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sidverma.io/index.xml" rel="self" type="application/rss+xml"/><item><title>I don't like traveling anymore</title><link>https://sidverma.io/posts/i-dont-like-traveling-anymore/</link><pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/i-dont-like-traveling-anymore/</guid><description>One of my biggest motivators to make money in my early 20s was traveling.</description></item><item><title>IS 1293 : What are the different kinds of Indian electrical sockets?</title><link>https://sidverma.io/posts/indian-electrical-sockets-is1293/</link><pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/indian-electrical-sockets-is1293/</guid><description>&lt;p>I spent a lot of time today reading the specifications of Indian electrical sockets, and since it took me way too long to find this information - here&amp;rsquo;s a quick summary of what the different kinds of sockets mean. I hope at least one other person finds this useful.&lt;/p></description></item><item><title>Comparing tools to connect your devices in a mesh VPN</title><link>https://sidverma.io/posts/homelab-mesh-vpn/</link><pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/homelab-mesh-vpn/</guid><description>&lt;p>I have a nice little computer in my house which hosts a bunch of services I use. It sits behind a NAT, so I can&amp;rsquo;t connect directly to it via my public IP address. Hence, I use a cheap cloud instance on DigitalOcean to act as the gateway for my home-server to the internet.&lt;/p>
+&lt;p>My &lt;a href="https://sidverma.io/2020/01/11/personal-infrastructure-overview/#how-things-actually-connect">previous setup&lt;/a> was basically a VPN tunnel between a cloud server and my home server, where the cloud server forwarded TCP traffic to my home server, which served all my services.&lt;/p>
+&lt;p>Lately, I&amp;rsquo;ve been rebuilding this infrastructure, and one of the things I was due for, is to have all my devices (my cloud server, home server, laptop, phone, etc) connected to each other all the time. Also, it needed to be in a mesh instead of hub-and-spoke, as there was no need for data to go over the internet if I&amp;rsquo;m home, on the same physical network as my home-server.&lt;/p>
+&lt;p>I spent a good amount of time trying out a bunch of methods, until settling on one. This post runs through all the options I found, and why I chose what I chose. I won&amp;rsquo;t go into how to set it up - there should be plenty of articles and documentation on the internet.
+TLDR: I now use tailscale with a headscale server.&lt;/p></description></item><item><title>House tour</title><link>https://sidverma.io/photos/house22/</link><pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate><guid>https://sidverma.io/photos/house22/</guid><description>&lt;p>I moved into a much older house in Goa earlier this year, and had a lot of fun these past months setting it up and wiring it down. It&amp;rsquo;s very janky, dusty, and lovely.&lt;/p></description></item><item><title>Decision making while writing software</title><link>https://sidverma.io/posts/meta-programming-1-making-decisions/</link><pubDate>Mon, 01 Jun 2020 01:00:00 +0000</pubDate><guid>https://sidverma.io/posts/meta-programming-1-making-decisions/</guid><description>&lt;p>&lt;em>Post #1 in the &lt;a href="https://sidverma.io/2020/06/01/meta-programming-0/">Meta:Programming&lt;/a> series.&lt;/em>&lt;/p></description></item><item><title>Meta:Programming - Notes about the nature of software development</title><link>https://sidverma.io/posts/meta-programming-0/</link><pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/meta-programming-0/</guid><description>&lt;p>I&amp;rsquo;m hoping to write a blog series for my younger self. He is someone who used to look at a service and say - &amp;ldquo;I could build that over a weekend&amp;rdquo;. This is also someone who would look at a company with a small product, which rarely gets any new features, and wonder why that product needs 10 developers working fulltime on it.&lt;/p>
+&lt;p>I don&amp;rsquo;t plan on writing about the philosophical aspects of those questions. Maybe the weekend hack &lt;em>would&lt;/em> come out better. Maybe that company &lt;em>is&lt;/em> bad at resource utilization. Maybe capitalism &lt;em>is&lt;/em> the root of all evil. I am taking the current state and processes at face value, and try to commentate on how and why this usually comes to be.&lt;/p>
+&lt;p>I hope that these posts don&amp;rsquo;t require a lot of technical knowledge, and are easily readable by beginners, or maybe non-technical folk.&lt;/p>
+&lt;ol>
+&lt;li>&lt;a href="https://sidverma.io/2020/06/01/meta-programming-1-making-decisions/">Decision making while writing software&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;p>Do keep in mind that these articles are restricted by my experience and perspective. If you feel that I might be wrong somewhere or am missing something important, feel free to suggest updates. The good thing about writing on the internet is that I can always update my old content.&lt;/p>
+&lt;p>Next : &lt;a href="https://sidverma.io/2020/06/01/meta-programming-1-making-decisions/">Decision making while writing software&lt;/a>&lt;/p></description></item><item><title>Diary of a new employee</title><link>https://sidverma.io/posts/diary-of-a-new-employee/</link><pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/diary-of-a-new-employee/</guid><description>&lt;h4 id="monday">Monday&lt;/h4>
+&lt;p>Today was my first day at this stealth startup. The boss (CEO) is a dick, but we&amp;rsquo;re building great stuff. The physical entertainment/tourism industry is a huge market, and it&amp;rsquo;s very possible that we&amp;rsquo;re going to be the next Disneyworld.&lt;/p>
+&lt;h4 id="tuesday">Tuesday&lt;/h4>
+&lt;p>Surprisingly, I feel halfway through my induction already. Things happen at such a fast pace here that it&amp;rsquo;s a bit exhilarating. Some areas definitely need much more oversight though. Just a few weeks ago, a field employee had an accident, which led to us getting sued for millions of $$. Thank fuck for insurance.&lt;/p>
+&lt;p>In other news, I met the rest of the systems team today. I was expecting to go through some sort of imposter syndrome, working in such a lean team, but looks like that these guys aren&amp;rsquo;t that much better than me. Except for Dennis, Dennis is the &lt;em>GOAT&lt;/em>!&lt;/p>
+&lt;h4 id="wednesday">Wednesday&lt;/h4>
+&lt;p>We got news that some outside &amp;ldquo;experts&amp;rdquo; would be coming in over the weekend for inspection. Most likely in response to the concerns of investors and the insurance company over the lawsuit. VCs are sending this mathematician who deals with risk-prediction models (I think?). On the other hand, John, our CEO, is also bringing in some famous academics who&amp;rsquo;d likely give us the required endorsement without much fuss.&lt;/p>
+&lt;p>Got to know more of my team today. Ray&amp;rsquo;s the cheif engineer. Good guy, heavy smoker. We really need a policy against smoking indoors here. This is not the 80s. Dennis turned out to be a bit of an ass though. There&amp;rsquo;s a lot of misplaced ego in him for building the system foundation.&lt;/p>
+&lt;h4 id="thursday">Thursday&lt;/h4>
+&lt;p>Induction got over, and today&amp;rsquo;s my first &lt;em>real&lt;/em> day at work. Now I have some clarity on how we&amp;rsquo;ve been doing things so fast. Systems seem to be well-built on the surface, but we have almost no testing protocols, no failover plans, and tons of single point of failures. And there don&amp;rsquo;t seem to be a lot of access controls in place too. We have all this high-tech environment, and almost any employee can shut down the system if they know no where to do it from.&lt;/p>
+&lt;p>On the plus side, the to-do list has points listing these problems. Though it&amp;rsquo;s unlikely anyone&amp;rsquo;s getting around to those anytime soon.&lt;/p>
+&lt;h4 id="friday">Friday&lt;/h4>
+&lt;p>Today we spent most of the day preparing for the visitors tomorrow. Mostly maintenance work around the facility, tightening nuts and bolts and recalibrating power levels. Some things are buggy, but nothing deal-breaking. We&amp;rsquo;re told that John&amp;rsquo;s family is also visiting the facility this weekend, to sorta &amp;ldquo;beta-test&amp;rdquo; the rides along with the experts.&lt;/p>
+&lt;h4 id="saturday">Saturday&lt;/h4>
+&lt;p>My shift just ended, and it&amp;rsquo;s been a smooth day so far. The family turned out to be little kids (John&amp;rsquo;s grandchildren, I assume). John insists that they are just visiting him, but I suspect he brought them in to try and butter up the experts. A lot is riding on their endorsements, and seeing kids experience the rides might give them a more positive outlook.&lt;/p>
+&lt;p>The tour had more kinks than we were expecting today. Ray&amp;rsquo;s been counting every glitch that he comes across today, and was up to 151 the last time I checked. &amp;ldquo;We have all the problems of a major theme park and a major zoo and the computers aren&amp;rsquo;t even on their feet yet&amp;rdquo;, his exact words.&lt;/p>
+&lt;p>To be very honest, I think he gives the system way less credit than its due. Sure, it&amp;rsquo;s far from perfect, but given the timeline, the company really spared no expense in building this place.&lt;/p>
+&lt;h4 id="sunday">Sunday&lt;/h4>
+&lt;p>HOLY FUCK! &lt;strong>WHAT THE FUCK!&lt;/strong> FUUUUUCK!&lt;/p>
+&lt;p>I&amp;rsquo;m writing this entry in the morning itself, as I&amp;rsquo;m not sure if I&amp;rsquo;m gonna find the time again. There&amp;rsquo;s a fair chance that we&amp;rsquo;d get shut down by tomorrow, if we don&amp;rsquo;t get arrested or get eaten by a stray disnoaur.&lt;/p>
+&lt;p>We don&amp;rsquo;t have a complete clarity on what&amp;rsquo;s happening. Power went out in most of the park yesterday, and is still out. Cage fences aren&amp;rsquo;t working, and even the phone lines are down! Wireless seems to be fucked too because of a very coincidental storm.&lt;/p>
+&lt;p>It appears that Dennis shut down the electrical grids yesterday and fled this island. No one knows why. We even seem to be locked out of the control systems. With no documentation, logs and system access, we&amp;rsquo;re probably not gonna be fixing this anytime soon.&lt;/p>
+&lt;p>Maybe a complete system restart throughout the park would work. Not ideal, but if there&amp;rsquo;s one thing that anyone in the IT crowd knows - it&amp;rsquo;s that turning computers off and on again is very magical.&lt;/p>
+&lt;p>Hopefully it works. Fuck you Dennis Nedry, and fuck you John Hammond!&lt;/p></description></item><item><title>Website Updates</title><link>https://sidverma.io/posts/website-updates/</link><pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/website-updates/</guid><description>&lt;p>Every once in a while, I get into this productivity slump where I don&amp;rsquo;t write code for weeks, and it gets hard to get back into the rhythm of working again. For me, the easiest way out of it is to redesign this website. It&amp;rsquo;s low-effort (relatively), gets some creative juices flowing and has little risk of not panning out ultimately.&lt;/p>
+&lt;p>And I guess it kinda worked. I spent two whole days on the redesign, and am pretty pleased with the results. Documenting the major decisions I took this time around in this post.&lt;/p></description></item><item><title>Personal infrastructure overview</title><link>https://sidverma.io/posts/personal-infrastructure-overview/</link><pubDate>Sat, 11 Jan 2020 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/personal-infrastructure-overview/</guid><description>&lt;p>Writing intros to posts is such a hard thing. I&amp;rsquo;ve spent more time on what to write in this paragraph than the rest of this article. You&amp;rsquo;re supposed to start with a background and a motivation, and conclude with a sentence that you finally did it, and here is how.&lt;/p>
+&lt;p>I have not &lt;em>done it&lt;/em> yet. This thing keeps evolving. As to why I started doing this: it&amp;rsquo;s fun. It&amp;rsquo;s fun and powerful to be in control of where your information resides. It&amp;rsquo;s fun to build a system to manage this efficiently. There are also some benefits too: much more control over my data and the services. These are also all open-source so I can add missing features which I really really want, and I don&amp;rsquo;t have to abide by the restrictive terms and limits of other platforms. And I don&amp;rsquo;t lose everything if a platform wants to shut itself down or delete my account for using their product wrong.&lt;/p></description></item><item><title>iOS Shortcuts for Firefly III</title><link>https://sidverma.io/posts/firefly-iii-ios-shortcuts/</link><pubDate>Fri, 06 Dec 2019 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/firefly-iii-ios-shortcuts/</guid><description>&lt;p>I&amp;rsquo;ve been using the excellent &lt;a href="https://firefly-iii.org/" target="_blank">Firefly III&lt;/a> to manage my expenses for a while. As a result, I have developed a habit to actively monitor every transaction I do, which, in my opinion is a much better way than using other automated expense managers which can only track your non-cash expenses, without a lot of context.&lt;/p>
+&lt;p>Android had an &lt;a href="https://f-droid.org/en/packages/xyz.hisname.fireflyiii/" target="_blank">unofficial app&lt;/a> which made it easier to interact with Firefly, but iOS doesn&amp;rsquo;t seem to have one, and the web-ui is not a very mobile friendly one.&lt;/p>
+&lt;p>While searching for solutions, I came across &lt;a href="https://www.jessedyck.me/2019/03/ios-shortcuts-firefly-iii/" target="_blank">this blog post by Jesse Dyck&lt;/a> where they utilised iOS Shortcuts to create transactions in Firefly. Honestly, I was pretty surprised that Shortcuts is powerful enough to do this, given Apple&amp;rsquo;s approach to customization.&lt;/p>
+&lt;p>The shortcuts provided by Jesse didn&amp;rsquo;t work for me (they were written for iOS 12, before Shortcuts were revamped for iOS 13), so I decided to build one for myself, with a UX more suited for my needs.&lt;/p></description></item><item><title>Moving to an iPhone (for now)</title><link>https://sidverma.io/posts/iphone/</link><pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/iphone/</guid><description>&lt;p>I spent the last two days trying to switch from my three year old Oneplus 3, to a brand new iPhone 11. I thought I was probably done with expensive phones (I count Oneplus as an expensive purchase), but resigned to giving iOS a chance this time around.&lt;/p>
+&lt;p>The Oneplus has served as my phone for 33 months now, and has had its fair share of rough usage. The screen broke twice (and got replaced once). Its battery had degraded so much that I didn&amp;rsquo;t dare go out without carrying a small sling bag with a charger and a power bank in it. Screen-on time would have been somewhere between 50-90 mins. At least it charged fast.&lt;/p>
+&lt;p>It wasn&amp;rsquo;t a fast phone by any means anymore too, and I&amp;rsquo;d gotten used to waiting a few seconds for apps to launch.&lt;/p>
+&lt;p>The iPhone, is a stark contrast to that. It&amp;rsquo;s a recent phone with the latest and greatest Apple processor, and things are super fucking fast on it. I am almost in disbelief of how much the battery lasts on this thing. That carry bag isn&amp;rsquo;t a necessity anymore (though I have gotten used to it - it came in handy a lot more times than it became a hindrance).&lt;/p></description></item><item><title>Backpacking 2019</title><link>https://sidverma.io/photos/backpacking19/</link><pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate><guid>https://sidverma.io/photos/backpacking19/</guid><description>&lt;p>Been backpacking for a few months, while severely reducing camera time. Here are some photos from Goa, Kolkata, Bangkok and Pai.&lt;/p></description></item><item><title>Eight months of unemployment and traveling</title><link>https://sidverma.io/posts/8-months-unemployment-traveling/</link><pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/8-months-unemployment-traveling/</guid><description>&lt;p>In March 2019, I left my job at &lt;a href="https://www.tower-research.com" target="_blank">Tower Research Capital&lt;/a>, to take a small break from work and live aimlessly for a while. My mental health had been declining steadily for the last few years, and going away for a while seemed like the only way out.&lt;/p></description></item><item><title>Doing sysadmin things through Terraform</title><link>https://sidverma.io/posts/sysadmin-terraform/</link><pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/sysadmin-terraform/</guid><description>&lt;p>&lt;em>Disclaimer: I have not worked as a sysadmin anywhere in my professional life, nor do I consider myself to be very good at it.&lt;/em>&lt;/p>
+&lt;p>I&amp;rsquo;ve self-hosted a small part of my personal infrastructure (IRC bouncer, VPN server, torrent client, etc) for a while now.
+These services were set up over the course of a week on the tiniest DigitalOcean instance five years ago, never to be touched again for the next three years.&lt;/p>
+&lt;p>Two years ago, at &lt;a href="https://hackbeach.in" target="_blank">Hackbeach 2017&lt;/a>, &lt;a href="https://twitter.com/aruns89" target="_blank">Arun Singh&lt;/a> gave a small talk on Infrastructure as code and &lt;a href="https://www.terraform.io" target="_blank">Terraform&lt;/a>. Around then, I had recently started frequenting &lt;a href="https://old.reddit.com/r/selfhosted" target="_blank">/r/selfhosted&lt;/a>, and decided to start self-hosting more of my services. Upon finally logging in into my server after three years, I couldn&amp;rsquo;t understand anything about the way it was set up. Port 443 seemed to be occupied by OpenVPN (for punching through restrictive firewalls), which proxied HTTP traffic to HAProxy which proxied it to a web server, and so on.&lt;/p></description></item><item><title>Ziro Festival 2019</title><link>https://sidverma.io/photos/ziro19/</link><pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate><guid>https://sidverma.io/photos/ziro19/</guid><description>&lt;p>I was not planning to go to the Ziro Festival this year, but the dates coincided with a layover in Kolkata, and hence made the stop.&lt;/p></description></item><item><title>Russians are harvesting our faces!</title><link>https://sidverma.io/posts/faceapp-much-ado-about-nothing/</link><pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/faceapp-much-ado-about-nothing/</guid><description>&lt;br>
+&lt;video autoplay="true" loop="true" width="100%">
+&lt;source src="https://sidverma.io/images/faceapp_old.mp4"
+type="video/mp4">
+&lt;/video>
+&lt;p>&lt;a href="https://www.forbes.com/sites/johnkoetsier/2019/07/17/viral-app-faceapp-now-owns-access-to-more-than-150-million-peoples-faces-and-names/amp/?__twitter_impression=true" target="_blank">This Forbes article&lt;/a> says that Faceapp is evil because they are harvesting user-data:&lt;/p>
+&lt;blockquote>
+&lt;p>That (Faceapp&amp;rsquo;s TOS) may not be dangerous and your likeness may stay on Amazon servers in America, as Forbes has determined, but they still own a license to do whatever they want with it. That doesn’t mean the app’s Russian parent company, Wireless Labs, will offer your face to the FSB, but it does have consequences, as PhoneArena’s Peter Kostadinov says:&lt;/p>
+&lt;blockquote>
+&lt;p>You might end up on a billboard somewhere in Moscow, but your face will most likely end up training some AI facial-recognition algorithm.&lt;/p>
+&lt;/blockquote>
+&lt;/blockquote>
+&lt;p>For context, here&amp;rsquo;s the lines from &lt;a href="https://faceapp.com/terms" target="_blank">FaceApp&amp;rsquo;s Terms of Service&lt;/a> which are been targeted:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;sub>You grant FaceApp a perpetual, irrevocable, nonexclusive, royalty-free, worldwide, fully-paid, transferable sub-licensable license to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, publicly perform and display your User Content and any name, username or likeness provided in connection with your User Content in all media formats and channels now known or later developed, without compensation to you. When you post or otherwise share User Content on or through our Services, you understand that your User Content and any associated information (such as your [username], location or profile photo) will be visible to the public.&lt;/sub>&lt;/p>
+&lt;/blockquote>
+&lt;p>In comparison, here are a few current (and one defunct) websites where users are known to share their faces quite a bit:&lt;/p></description></item><item><title>Kodi controllers</title><link>https://sidverma.io/posts/inattentional-blindness/</link><pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/inattentional-blindness/</guid><description>&lt;p>For the past five years, a Raspberry Pi, running &lt;a href="https://kodi.tv/" target="_blank">Kodi&lt;/a>, has been attached to my TV. The Pi, TV and the software all get updated time to time, but the overall setup has been the same for most of it.&lt;/p>
+&lt;pre>&lt;code>+----+ +----+ +-----+
+| TV |----(HDMI)----| Pi |--(USB/DLNA)--| HDD |
++----+ +----+ +-----+
+&lt;/code>&lt;/pre>&lt;p>Controllers I&amp;rsquo;ve used for Kodi over the years -&lt;/p>
+&lt;ul>
+&lt;li>Desktop Keyboards (Wired/Wireless)&lt;/li>
+&lt;li>Wireless Mouse&lt;/li>
+&lt;li>Web Interface&lt;/li>
+&lt;li>Tasker scenes utilizing the web interface API&lt;/li>
+&lt;li>Kodi remote apps (for Android/iOS)&lt;/li>
+&lt;li>Emulated keyboard over SSH&lt;/li>
+&lt;li>VNC&lt;/li>
+&lt;li>Arduino based bluetooth remote&lt;/li>
+&lt;li>Game controllers&lt;/li>
+&lt;/ul>
+&lt;p>Some of these were novelty ones, others were used because of circumstantial needs+availability.&lt;/p>
+&lt;p>My primary controller is the excellent app &lt;a href="https://play.google.com/store/apps/details?id=org.leetzone.android.yatsewidgetfree" target="_blank">Yatse&lt;/a> (Lets you browse/play media on the phone itself - much faster than the TV UI). When the phone&amp;rsquo;s not nearby, or there&amp;rsquo;s a guest involved, I use a game controller (connected for retroPie anyway).&lt;/p>
+&lt;p>Last week, I was setting up Kodi (&lt;a href="https://osmc.tv/" target="_blank">OSMC&lt;/a> to be exact) on my old roommate&amp;rsquo;s Raspberry Pi. While I was installing Yatse on his phone, this other guy present there, who isn&amp;rsquo;t familiar with the software, doesn&amp;rsquo;t have any of the controller I know of, starts browsing movies on the TV. I look over, dumbfounded, and see him casually using the TV remote to play around in the UI.&lt;/p>
+&lt;p>Five years of having a &lt;a href="https://en.wikipedia.org/wiki/Consumer_Electronics_Control" target="_blank">CEC&lt;/a>-compatible TV with a CEC-compatible SBC, and it never dawned on me to try the simplest UI possible - The TV remote.&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/IGQmdoK_ZfY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;br></description></item><item><title>Andaman Islands</title><link>https://sidverma.io/photos/andaman19/</link><pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate><guid>https://sidverma.io/photos/andaman19/</guid><description>&lt;p>Family took a few days off to spend some time in the Andaman Islands.&lt;/p></description></item><item><title>(Hillhikes and) Hillhacks 2019</title><link>https://sidverma.io/photos/hillhacks19/</link><pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate><guid>https://sidverma.io/photos/hillhacks19/</guid><description>&lt;p>It felt disingenuous to just call this album Hillhacks 2019, given the extreme lack of actual conference photos here. The main motive of venturing out was Hillhacks, but the hikes we padded it with were much more photogenic.&lt;/p></description></item><item><title>Week in Goa</title><link>https://sidverma.io/photos/goa19/</link><pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate><guid>https://sidverma.io/photos/goa19/</guid><description>&lt;p>The annual trip with a couple of close friends took us to Arambol, Goa this year. We did spend more time in the hills of Goa rather than the beaches this time around.&lt;/p></description></item><item><title>Hackbeach 2018</title><link>https://sidverma.io/photos/hackbeach18/</link><pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate><guid>https://sidverma.io/photos/hackbeach18/</guid><description>&lt;p>Hackbeach revisited the previous venue too in 2018. The water was way calmer, and almost every attendee learned to swim at least to a basic level in the ocean.&lt;/p></description></item><item><title>Ziro Festival 2018</title><link>https://sidverma.io/photos/ziro18/</link><pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate><guid>https://sidverma.io/photos/ziro18/</guid><description>&lt;p>Ziro Festival of Music is a music festival which takes place in the Ziro Valley (duh) every year. Probably one of the prettiest places to have a concert in the country.&lt;/p></description></item><item><title>Minimalistic npm packages.</title><link>https://sidverma.io/posts/minimal-npm-packages/</link><pubDate>Thu, 16 Aug 2018 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/minimal-npm-packages/</guid><description>&lt;p>A follow up to &lt;a href="https://sidverma.io/2018/08/11/javascript-mathematical-operations/">my previous post&lt;/a>, this time we look into some of the lesser known, but widely used javascript packages.&lt;/p>
+&lt;p>Javascript&amp;rsquo;s NPM package manager, is one of the &lt;a href="http://www.modulecounts.com/" target="_blank">biggest and fastest growing&lt;/a> package manager out there. As of writing this:&lt;/p>
+&lt;ul>
+&lt;li>RubyGems - 145,675 (25 new packages/day)&lt;/li>
+&lt;li>PyPI - 149,111 (104 new packages/day)&lt;/li>
+&lt;li>Packagist - 191,577 (103 new packages/day)&lt;/li>
+&lt;li>Maven Central - 244,143 (149 new packages/day)&lt;/li>
+&lt;li>&lt;strong>npm - 679,009 (508 new packages/day)&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Minimalism doesn&amp;rsquo;t only apply to design, lifestyle and ownership, but also to code. Here are some of the most minimal packages in npm:&lt;/p></description></item><item><title>Mathematical operations on objects in javascript.</title><link>https://sidverma.io/posts/javascript-mathematical-operations/</link><pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/javascript-mathematical-operations/</guid><description>&lt;p>&lt;em>All of these were executed on Node.js 6.9.1&lt;/em>&lt;/p>
+&lt;pre>&lt;code>&amp;gt; [] + []
+''
+&lt;/code>&lt;/pre>&lt;p>Obviously.&lt;/p>
+&lt;pre>&lt;code>&amp;gt; [] + {}
+'[object Object]'
+&lt;/code>&lt;/pre>&lt;p>Less obvious, but okay.&lt;/p>
+&lt;pre>&lt;code>&amp;gt; {} + []
+0
+&lt;/code>&lt;/pre>&lt;p>Huh?&lt;/p>
+&lt;pre>&lt;code>&amp;gt; {} + {}
+'[object Object][object Object]'
+&lt;/code>&lt;/pre>&lt;p>Oh, fuck off.&lt;/p>
+&lt;p>I&amp;rsquo;d rather just add strings to these from now on:&lt;/p>
+&lt;pre>&lt;code>&amp;gt; [] + ''
+''
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&amp;gt; [] + '1'
+'1'
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&amp;gt; [] + 'a'
+'a'
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&amp;gt; {} + ''
+0
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&amp;gt; {} + '1'
+1
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&amp;gt; {} + 'a'
+NaN
+&lt;/code>&lt;/pre>&lt;p>Lol.&lt;/p>
+&lt;p>Okay, subtraction maybe:&lt;/p>
+&lt;pre>&lt;code>&amp;gt; [] - []
+0
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&amp;gt; {} - {}
+NaN
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&amp;gt; [] - ''
+''
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&amp;gt; [] - '1'
+-1
+&lt;/code>&lt;/pre>&lt;pre>&lt;code>&amp;gt; [] - {}
+NaN
+&lt;/code>&lt;/pre>&lt;p>FML.&lt;/p>
+&lt;p>But, my favorite one is this:&lt;/p>
+&lt;pre>&lt;code>&amp;gt; {} - []
+-0
+&lt;/code>&lt;/pre>&lt;p>Follow-up post: &lt;a href="https://sidverma.io/2018/08/16/minimal-npm-packages/">Minimalistic javascript packages&lt;/a>&lt;/p></description></item><item><title>Trip to Leh</title><link>https://sidverma.io/photos/leh18/</link><pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate><guid>https://sidverma.io/photos/leh18/</guid><description>&lt;p>Left hillhacks early to visit the Ladakh area with my family.&lt;/p></description></item><item><title>Hillhacks 2018</title><link>https://sidverma.io/photos/hillhacks18/</link><pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate><guid>https://sidverma.io/photos/hillhacks18/</guid><description>&lt;p>Hillhacks repeats the venue in 2018, hence slightly easier to organise.&lt;/p></description></item><item><title>The internet kind of sucks now.</title><link>https://sidverma.io/posts/internet-kinda-sucks-nowadays/</link><pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/internet-kinda-sucks-nowadays/</guid><description>&lt;p>&lt;em>This is mostly a rant, over my increasing frustration with how the internet works nowadays. Maybe it&amp;rsquo;s just nostalgia with rose-colored glasses. I still want to shout this here in this void.&lt;/em>&lt;/p>
+&lt;p>I wasn&amp;rsquo;t there during the early days of internet. The first time I went online, was probably in 2005. That&amp;rsquo;s only a little over a decade, but I remember it way too differently from what it is now. Now, it&amp;rsquo;s way too&amp;hellip; homogenized is probably the right word.&lt;/p>
+&lt;p>&lt;strong>Chat sucks the most&lt;/strong>. Probably the worst victim of the walled-garden approach.
+Things I have installed right now - Facebook messenger, Whatsapp, Telegram, Signal, Threema, Hangouts, Slack, AndroIRC, Riot.&lt;/p>
+&lt;p>&lt;em>At some point last year, I got fed up and turned off notifications for all of these except Telegram on my phone. I still keep them installed, but everything is pull-based now, when someone asks me to look at something.&lt;/em>&lt;/p>
+&lt;p>I am not new to being on loads of platforms. A decade ago, I used to have accounts on MSN and Yahoo messenger, Google talk, (even facebook too), IRC networks, and probably a dozen I can&amp;rsquo;t remember. But at some point, I found out about XMPP and pidgin, and how open protocols are such great things. mIRC used to be the hangout app, and pidgin the IM app. Any platform, ultimately boiled down to one of these. Then, one by one, almost everyone started killing off their XMPP gateways. They cited low volume, and lack of support for their &lt;em>exciting and new features&lt;/em>. It&amp;rsquo;s always animated emojis or fucking stickers. Even slack shut down their IRC gateway earlier this year.&lt;/p>
+&lt;p>&lt;em>It&amp;rsquo;s on my To-do list to configure bitlbee and libpurple and put everything on libpurple.&lt;/em>&lt;/p>
+&lt;p>&lt;strong>Communities suck too&lt;/strong>. Everything is a facebook group and a subreddit now. Forums are ghost towns in comparison. Forums, which had basic to extremely detailed information, queries, all sorted and tagged, categorized. The forums dedicated to Lost and Doctor Who were way more fun than the show itself. You go to &lt;a href="https://reddit.com/r/startrek" target="_blank">/r/startrek&lt;/a> now, and you&amp;rsquo;re bombarded with memes, cosplay, news about the upcoming Discovery season, theories, past episode-appreciation posts, and general rants. Feel free to try to use the broken filter-by-flair. When you visited the phpBB forum for the same, there were so many subcategories, and years old active threads with lots of archived information. There&amp;rsquo;s one for artwork, one for theories, one for episode discussions, another for character discussion, another for fan-fiction. Karma fishing and reposts wasn&amp;rsquo;t even a problem.&lt;/p>
+&lt;p>&lt;em>I&amp;rsquo;m honestly surprised that XDA and DeviantArt, some of my oldest communities, have stuck around for so long.&lt;/em>&lt;/p>
+&lt;p>&lt;strong>And then there&amp;rsquo;re social networks&lt;/strong>. My friends, at the very least, don&amp;rsquo;t &amp;ldquo;share&amp;rdquo; things online anymore. Everything is a carefully worded, edited, instagram-filtered broadcast to the world. Nothing feels personal. I had better communication with my deviantArt friends than I have with my facebook friends now. If I &lt;a href="https://chrome.google.com/webstore/detail/news-feed-eradicator-for/fjcldmjmjhkklehbacihaiopjklihlgg" target="_blank">unblock my facebook news feed&lt;/a> right now, this is what I see: Random selfie #9 this week, anti-Trump news, anti-BJP news, anti-BJP posts, rants against patriarchy. Once in a while I find out something interesting about poeple: a new relationship, a new job, a new city. But everything else is just people shouting the same thing in an echo chamber. Or else, it&amp;rsquo;s a whole lot of self-promotion.&lt;/p>
+&lt;p>I remember this being way different in 2010: There was a group for post-class hangout, another for books present in our library, and countless others. News feed used to be people sharing opinions without fear, and way less fishing for &amp;lsquo;likes&amp;rsquo;. People planned things using their status. Comments were more conversational than &amp;lsquo;👍🏼&amp;rsquo; and &amp;lsquo;nice pic.'. All the things I despise right now did exist then, but in a far lesser amount.&lt;/p>
+&lt;p>&lt;em>I dread the day when &lt;a href="https://np.reddit.com/r/announcements/comments/863xcj/new_addition_to_sitewide_rules_regarding_the_use/dw2rwy1/?context=3" target="_blank">reddit finally turns into a social network&lt;/a>.&lt;/em>&lt;/p>
+&lt;p>&lt;strong>I also miss RSS&lt;/strong>. Nowadays, my RSS feed is just news and comics. At some point, people used to have blogspot and wordpress accounts, where they tagged posts. I subscribed to the &amp;lsquo;travel&amp;rsquo; feed for someone, &amp;lsquo;personal&amp;rsquo; of someone else, &amp;lsquo;essays&amp;rsquo; of the other. Now everything is just there, flat on Facebook/Twitter. Even they used to offer RSS feeds, which they phased out. Fucking twitter, where you get just one feed, with people sharing memes, jokes, news, achievements, all floating in the same cesspool of diarrhea, just begging for retweets.&lt;/p></description></item><item><title>Dumb smartphone is the best smartphone.</title><link>https://sidverma.io/posts/dumb-smartphone/</link><pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/dumb-smartphone/</guid><description>&lt;p>Quick recap: I dropped my Oneplus 3 six months ago - didn&amp;rsquo;t get it repaired for a month. Instead, carried this $10 phone with me for a while.&lt;/p>
+&lt;figure>
+&lt;img src="https://sidverma.io/images/dumbphone.jpg"
+alt="My interimn phone"/> &lt;figcaption>
+&lt;p>My interimn phone&lt;/p>
+&lt;/figcaption>
+&lt;/figure></description></item><item><title>Road trip to Jaisalmer</title><link>https://sidverma.io/photos/jaisalmer18/</link><pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate><guid>https://sidverma.io/photos/jaisalmer18/</guid><description>&lt;p>Road trips aren&amp;rsquo;t usually my thing, nor deserts. But this trip turned out to be fun anyway.&lt;/p></description></item><item><title>Hackbeach 2017</title><link>https://sidverma.io/photos/hackbeach17/</link><pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate><guid>https://sidverma.io/photos/hackbeach17/</guid><description>&lt;p>Hackbeach 2017 happened right at the main beach in Gokarna.&lt;/p></description></item><item><title>Hillhacks and Hackbeach</title><link>https://sidverma.io/posts/hillhacks-hackbeach/</link><pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/hillhacks-hackbeach/</guid><description>&lt;p>Hillhacks, &lt;a href="https://hillhacks.in/about/" target="_blank">as defined by the website&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>hillhacks is held in the lap of the stunning Dhauladhar Himalayas every summer.&lt;br>&lt;/p>
+&lt;p>People from different places, walks of life and lines of thought come together to share, collaborate and learn.&lt;br>&lt;/p>
+&lt;p>Hackers talk code. Artists share their creativity. Students join in from schools and colleges to learn new skills. Locals and globals mix and mingle. We build things like tables, hula hoops, interactive art installations, and solar lanterns. We connect. We dance and sing. Ideas emerge. Collaborations form. Lives change.&lt;br>&lt;/p>
+&lt;p>In the hacking, we get hacked ourselves.&lt;br>&lt;/p>
+&lt;/blockquote>
+&lt;p>Hackbeach is the sister event of hillhacks, held in the winters, on one of India&amp;rsquo;s coast.&lt;/p>
+&lt;p>What we don&amp;rsquo;t have:&lt;/p>
+&lt;ul>
+&lt;li>Sponsors&lt;/li>
+&lt;li>Organizers&lt;/li>
+&lt;li>Welcome packages&lt;/li>
+&lt;li>Huge well-lit stage&lt;/li>
+&lt;li>Chairs around the said stage&lt;/li>
+&lt;li>Air conditioning&lt;/li>
+&lt;li>Booths and banners&lt;/li>
+&lt;li>T-Shirt and stickers table&lt;/li>
+&lt;li>Catered lunch&lt;/li>
+&lt;li>Coffee machine&lt;/li>
+&lt;/ul>
+&lt;p>What we have:&lt;/p>
+&lt;ul>
+&lt;li>Space to camp&lt;/li>
+&lt;li>Beautiful views&lt;/li>
+&lt;li>A long unconference&lt;/li>
+&lt;li>2-4 day of main conference&lt;/li>
+&lt;li>Setup and teardown of the said conference&lt;/li>
+&lt;li>Talks and flash talks&lt;/li>
+&lt;li>Opportunities to learn new skills&lt;/li>
+&lt;li>Hackers&lt;/li>
+&lt;/ul>
+&lt;p>What we might also have:&lt;/p>
+&lt;ul>
+&lt;li>Accountants, Anthropologist, Farmers, Activists, Geologists&amp;hellip;&lt;/li>
+&lt;li>School programs to teach young kids about science and technology&lt;/li>
+&lt;li>Cooking&lt;/li>
+&lt;li>Slacklining&lt;/li>
+&lt;li>Hoola hoop lessons&lt;/li>
+&lt;li>Board/card games&lt;/li>
+&lt;li>Quiz nights&lt;/li>
+&lt;li>Hiking in the hills&lt;/li>
+&lt;li>All day swimming lessons&lt;/li>
+&lt;li>Paragliding&lt;/li>
+&lt;li>Sleeping on the sandy beaches&lt;/li>
+&lt;li>Cartons of all you can grab stickers&lt;/li>
+&lt;li>Open discusssions across a variety of subjects&lt;/li>
+&lt;li>Demostration of cool projects&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://hillhacks.in" target="_blank">Hillhacks&lt;/a> | &lt;a href="https://hackbeach.in" target="_blank">Hackbeach&lt;/a>&lt;/p></description></item><item><title>Link etiquettes for web developers.</title><link>https://sidverma.io/posts/link-etiquettes/</link><pubDate>Wed, 02 Aug 2017 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/link-etiquettes/</guid><description>&lt;p>This post might seem like nitpicking, or unnecessary to a lot of people, but it&amp;rsquo;s frustrating when links don&amp;rsquo;t work how they&amp;rsquo;re expected to.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>DO NOT use &lt;code>&amp;lt;span&amp;gt;&lt;/code> or &lt;code>&amp;lt;div&amp;gt;&lt;/code> tags and then proceed to handle their &lt;code>click&lt;/code> events. Use proper &lt;code>&amp;lt;a&amp;gt;&lt;/code> tags. This breaks so many things!&lt;/p>
+&lt;ul>
+&lt;li>People can&amp;rsquo;t use them if they have disabled javascript or it just failed to load.&lt;/li>
+&lt;li>Ctrl-click will not open a new tab unless you explicitly handle the situation. (More on that below)&lt;/li>
+&lt;li>Even then, you just dumbed down your users&amp;rsquo; context menus. No &lt;em>Open link in new tab&lt;/em>, or &lt;em>Copy link address&lt;/em>.&lt;/li>
+&lt;li>The same situation on mobile. Long click will copy the text instead of showing helpful actions.&lt;/li>
+&lt;li>The javascript might break, throw an unexpected error, or burn down your house, rendering that &amp;ldquo;link&amp;rdquo; useless.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Even when you are using &lt;code>&amp;lt;a&amp;gt;&lt;/code> tags:&lt;/p>
+&lt;ul>
+&lt;li>If possible, execute whatever JS you want, and then let the link do its job. Don&amp;rsquo;t &lt;code>preventDefault()&lt;/code> and open the link through javascript.&lt;/li>
+&lt;li>If you really have to open it through JS, take care of Ctrl-clicks. And Cmd-clicks in case of macOs. &lt;a href="http://unixpapa.com/js/key.html" target="_blank">Old browsers might make this difficult&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Put &lt;code>mailto:&lt;/code> links only where the email-id is the visible text too. &lt;a href="mailto:foo@bar.com">foo@bar.com&lt;/a> is so much better than &lt;a href="mailto:foo@bar.com">Contact Email&lt;/a>. Not everyone has email clients configured, and opening bulky clients when clicking a link is just bad UX. Or people might just want to note down the address, to contact later.&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>Wi-Fi positioning woes</title><link>https://sidverma.io/posts/wifi-positioning/</link><pubDate>Wed, 12 Jul 2017 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/wifi-positioning/</guid><description>&lt;p>Alice lives in India. She has super-cheap cellular internet (less than $0.2/GB on some networks). Cheap enough for it to be her daily driver, using &lt;a href="http://www.amazon.in/D-Link-DWR-720-HSPA-Mobile-Router/dp/B00PVD1RV2" target="_blank">a&lt;/a> &lt;a href="https://www.amazon.com/Hotspot-Unlocked-Worldwide-Huawei-E5220s-6/dp/B06XJ5NF8W/" target="_blank">number&lt;/a> &lt;a href="https://www.amazon.com/Verizon-Wireless-LTE-Prepaid-Smartphone/dp/B014RJJXUW/" target="_blank">of&lt;/a> &lt;a href="https://www.amazon.com/Hotspot-Unlocked-MF65-Router-Mobile/dp/B01KGCMUQ8/" target="_blank">portable&lt;/a> Wi-Fi routers, which just sit on her desk. And since it is so cheap and portable and convenient and long-lasting, she just carries it everywhere in her purse, wherever she travels.&lt;/p>
+&lt;p>Alice also faces an a peculiar amount of problems with her GPS. She could be at a crowded bus station, trying to get an Uber, or stuck in a storm, again trying to get a cab, her phone just fails to locate her correctly long enough for the app to work. Either it&amp;rsquo;ll just be showing her previous location at the far away house, or it will keep fluctuating and jumping between her actual position, and her house. People around her sometimes get affected too. Maybe it&amp;rsquo;s a curse.&lt;/p></description></item><item><title>Hillhacks 2017</title><link>https://sidverma.io/photos/hillhacks17/</link><pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate><guid>https://sidverma.io/photos/hillhacks17/</guid><description>&lt;p>Some Hillhacks 2017 photos and even more from a stop at Dharamshala and some hills.&lt;/p></description></item><item><title>STDIN inputs via Sublime Text (sort of)</title><link>https://sidverma.io/posts/sublime-input/</link><pubDate>Sat, 03 Jan 2015 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/sublime-input/</guid><description>&lt;p>I love Sublime Text. I really do. I can put a ring on it if it had any corporeal form. I&amp;rsquo;ve been using it so much, that trying to work on anything else is kind of a pain. And yet, when dealing with STDIN inputs, the magic falters. This method describes a workaround to give inputs without a prompt.&lt;/p>
+&lt;p>Recently, I tried my hand on Competitive Programming, and though I didn&amp;rsquo;t get really good at it, I did encounter a frustation. Entering the same input again and again after every change I make to the code. I wanted a simpler method.&lt;/p>
+&lt;p>Here&amp;rsquo;s what a friend of mine came up with: Enter the input in comments.&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="cm">/*input
+&lt;/span>&lt;span class="cm">2
+&lt;/span>&lt;span class="cm">foo
+&lt;/span>&lt;span class="cm">bar
+&lt;/span>&lt;span class="cm">*/&lt;/span>
+&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kt">char&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>
+&lt;p>gives the output:&lt;/p>
+&lt;pre>&lt;code>foo
+bar
+&lt;/code>&lt;/pre></description></item><item><title>Contact</title><link>https://sidverma.io/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sidverma.io/contact/</guid><description>You can reach me by email at me [at] [this-domain]</description></item><item><title>What games have I ever played?</title><link>https://sidverma.io/games/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sidverma.io/games/</guid><description>For reasons unknown, I&amp;rsquo;m compiling a list of all the games I&amp;rsquo;ve ever played.</description></item></channel></rss>
