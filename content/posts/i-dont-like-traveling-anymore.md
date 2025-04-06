@@ -32,5 +32,8 @@ Maybe part of my blame lies with the ubiquity of information on the internet. I 
 
 Or maybe I am just going through a rooting phase, and one day I will get over it, and find new reasons for travel. I wait patiently for them to reveal themselves. Until then my travel will be limited to visiting friends, meetups/conferences/festivals, or going to local waterfalls, quarries, river deltas, beaches, hilltops and plateaus in different seasons–while getting to know the flora, the fauna, the landscape and how they change with time. But this is something I can rarely experience as a short-term traveler to a distant land.
 
+_[HN Discussion][hn]_
+
 [goa]: https://www.goa.gov.in/know-goa/about-goa-state/
 [ra]: https://en.wikipedia.org/wiki/Relationship_anarchy
+[hn]: https://news.ycombinator.com/item?id=43590973#43591988
