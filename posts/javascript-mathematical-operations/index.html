@@ -1,0 +1,33 @@
+<!doctype html><html data-color-scheme=auto><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Mathematical operations on objects in javascript. · Sid Verma</title><link rel=stylesheet href=/css/rocinante.min.css><link rel=stylesheet type=text/css href=https://sidverma.io/css/style.43d9f1db361927f335592361b86ccbd6cfa942114cc7afe99c1a78eb7a648cb0.css><link rel="shortcut icon" href=/icons/favicon.ico><body><header><h2><a class=site-title href=https://sidverma.io/>‹ Sid Verma</a></h2></header><main><div class=post><div class=title-group><div class=title><h1>Mathematical operations on objects in javascript.</h1></div><div class=date><h5>Aug 11, 2018</h5></div></div><article class=content><p><em>All of these were executed on Node.js 6.9.1</em></p><pre><code>&gt; [] + []
+''
+</code></pre><p>Obviously.</p><pre><code>&gt; [] + {}
+'[object Object]'
+</code></pre><p>Less obvious, but okay.</p><pre><code>&gt; {} + []
+0
+</code></pre><p>Huh?</p><pre><code>&gt; {} + {}
+'[object Object][object Object]'
+</code></pre><p>Oh, fuck off.</p><p>I&rsquo;d rather just add strings to these from now on:</p><pre><code>&gt; [] + ''
+''
+</code></pre><pre><code>&gt; [] + '1'
+'1'
+</code></pre><pre><code>&gt; [] + 'a'
+'a'
+</code></pre><pre><code>&gt; {} + ''
+0
+</code></pre><pre><code>&gt; {} + '1'
+1
+</code></pre><pre><code>&gt; {} + 'a'
+NaN
+</code></pre><p>Lol.</p><p>Okay, subtraction maybe:</p><pre><code>&gt; [] - []
+0
+</code></pre><pre><code>&gt; {} - {}
+NaN
+</code></pre><pre><code>&gt; [] - ''
+''
+</code></pre><pre><code>&gt; [] - '1'
+-1
+</code></pre><pre><code>&gt; [] - {}
+NaN
+</code></pre><p>FML.</p><p>But, my favorite one is this:</p><pre><code>&gt; {} - []
+-0
+</code></pre><p>Follow-up post: <a href=/2018/08/16/minimal-npm-packages/>Minimalistic javascript packages</a></p></article><br><div class=tags><div class="horizontal-links links"><a href=/tags/tech/>#tech</a></div></div></article></main><footer><div class=content-container><div class=content><p>Hey friend. I&rsquo;m <b class=sway>Sid</b>.</p><p>This is my home on the internet. Come, have a tour. Please leave your shoes at the door.</p><p>I work with technology for a living - mostly as a software engineer. Some details are available in the resume below. In addition, I&rsquo;m interested in filmmaking, tinkering with electronics, and building a decentralized internet.</p><p>I also like trees.</p><p>Email me if you&rsquo;d like to work together. <em>Or if you just wanna chat.</em><br></p><p class=horizontal-links><a href=/resume target=_blank>Resume</a><a href=/contact class=email-hook id=about-email title="Click to show email">Email</a><a href=https://github.com/mavidser target=_blank>Github</a><a href=https://instagram.com/mavidser target=_blank>Instagram</a></p><p class=horizontal-links><a href=/posts>All Posts</a><a href=/photos>Photo albums</a><a href=/tags>List of tags</a></p></div><div class=footer-text><span class=footer-emoji>✌️</span></div></div></footer><script>const emailId=atob("bWVAc2lkdmVybWEuaW8=");</script><script src=/js/rocinante.min.js></script></body></html>
