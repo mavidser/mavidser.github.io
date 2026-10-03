@@ -40,6 +40,7 @@ Put these in the `params` section of config.toml
 - **favicon** - A string of the favicon path in the `static` directory.  Eg: `favicon = "icon/favicon.jpg"`
 - **author** - Optional. Your name, used in the microformats `h-card`. Either a string, or a table with a `name` key. Defaults to the site title. Eg: `author = "Alonso Quixano"`
 - **avatar** - Optional. Path or URL of a photo of you, used in the microformats `h-card`. Not displayed on the page. Eg: `avatar = "icons/me.jpg"`
+- **webmention** - Optional. URL of your [Webmention](https://indieweb.org/Webmention) endpoint, so other sites can notify yours when they link to it. Eg: `webmention = "https://webmention.io/example.com/webmention"`
 - **about** - A string of the about text. This is slightly ugly, sorry. Eg: `about = """Hi. Welcome to my website"""`
 - **links** - A table which contains array of `link` tables. This one is easier to explain using an example. Details of the link `table`:
   - name - String containing the text of the link

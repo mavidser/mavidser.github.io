@@ -18,6 +18,7 @@ summaryLength = 0
   colorScheme = "auto"
   customCSS = ["/css/style.css"]
   favicon = "/icons/favicon.ico"
+  webmention = "https://webmention.io/sidverma.io/webmention"
   socialBanner = "/icons/banner.png"
   mainSections = ["posts", "photos"]
   specialEmail = "me@sidverma.io"

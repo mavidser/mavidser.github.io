@@ -20,6 +20,10 @@
 <link rel="shortcut icon" href="{{ . }}">
 {{ end }}
 
+{{ with .Site.Params.webmention }}
+<link rel="webmention" href="{{ . }}" />
+{{ end }}
+
 {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
