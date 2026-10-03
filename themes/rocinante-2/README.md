@@ -18,6 +18,7 @@ Rocinante is a minimal and lightweight theme for hugo. It has minimal non-essent
 - RSS Feeds
 - No essential Javascript
 - Custom CSS support
+- [IndieWeb](https://indieweb.org/) friendly: [microformats2](https://microformats.org/wiki/microformats2) markup (`h-card`, `h-entry`, `h-feed`) and `rel="me"` links
 
 The only javascript in the theme is for an optional enhancement to Email link, where it shows the email ID upon clicking such links. See the demo on the 'Email' link on [the demo website](https://sidverma.io/hugo-rocinante/). If javascript is disabled, it works as a normal link.
 
@@ -37,11 +38,14 @@ Put these in the `params` section of config.toml
 - **mainSections** - An array containing either `"posts"`, `"photos"` or both. Only the content type listed in the array gets listed on the homepage. Eg: `mainSections = ["post", "photos"]`
 - **email** - A string which will be used in the `mailto` link if smart email links are being used. Details on smart links are below, in the links option details. Eg: `email = "email@example.com"`
 - **favicon** - A string of the favicon path in the `static` directory.  Eg: `favicon = "icon/favicon.jpg"`
+- **author** - Optional. Your name, used in the microformats `h-card`. Either a string, or a table with a `name` key. Defaults to the site title. Eg: `author = "Alonso Quixano"`
+- **avatar** - Optional. Path or URL of a photo of you, used in the microformats `h-card`. Not displayed on the page. Eg: `avatar = "icons/me.jpg"`
 - **about** - A string of the about text. This is slightly ugly, sorry. Eg: `about = """Hi. Welcome to my website"""`
 - **links** - A table which contains array of `link` tables. This one is easier to explain using an example. Details of the link `table`:
   - name - String containing the text of the link
   - href - String containing URL of the link
   - newTab = Boolean, to open link in a new tab
+  - rel - Optional string for the link's `rel` attribute. Use `"me"` on links to your other profiles (which link back to your site) for [IndieWeb identity verification](https://indieweb.org/rel-me), and verified links on Mastodon.
   - specialEmailLink = Boolean. If true, a javascript snippet is included which changed link behavior. Text will change to the content of `email` param upon clicking once, after which it follows a `mailto:` link to the same. See example on the Email link in the about section of the demo page.
 
   Example:

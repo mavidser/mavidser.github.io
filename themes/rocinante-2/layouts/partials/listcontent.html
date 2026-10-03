@@ -1,17 +1,19 @@
-<div class="list-content">
+<div class="list-content h-feed">
+    <data class="p-name" value="{{ .Title }}" hidden></data>
+    {{- partial "author-hcard.html" . }}
     {{ range .Paginator.Pages }}
     {{ if not .Params.hidden }}
-    <article class="post-list">
+    <article class="post-list h-entry">
         <div class="title-group-solo">
-            <a href="{{ .RelPermalink }}">
+            <a class="u-url" href="{{ .RelPermalink }}">
             {{ if eq .Type "photos" }}
-                <span class="date">{{ .Params.date.Format "2006 Jan" }}</span>
+                <span class="date"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Params.date.Format "2006 Jan" }}</time></span>
                 <span class="label">&nbsp;📸&nbsp;</span>
             {{ else }}
-                <span class="date">{{ .Params.date.Format "2006 Jan 02" }}</span>
+                <span class="date"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Params.date.Format "2006 Jan 02" }}</time></span>
             {{ end }}
             <span class="title">
-                <h3>
+                <h3 class="p-name">
                     {{ .Title }}
                 </h3>
             </span>

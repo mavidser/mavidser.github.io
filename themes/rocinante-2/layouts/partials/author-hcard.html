@@ -1,0 +1,9 @@
+{{- /* Hidden author h-card (microformats2), nested inside an h-entry or h-feed as p-author */ -}}
+{{- $name := partial "author-name.html" . -}}
+<data class="p-author h-card" value="{{ $name }}" hidden>
+  <data class="p-name" value="{{ $name }}"></data>
+  <data class="u-url" value="{{ site.BaseURL }}"></data>
+  {{- with site.Params.avatar }}
+  <data class="u-photo" value="{{ . | absURL }}"></data>
+  {{- end }}
+</data>

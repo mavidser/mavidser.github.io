@@ -1,9 +1,16 @@
+{{ $name := partial "author-name.html" . }}
+<div class="h-card">
+<data class="p-name" value="{{ $name }}" hidden></data>
+<data class="u-url u-uid" value="{{ site.BaseURL }}" hidden></data>
+{{ with site.Params.avatar }}<data class="u-photo" value="{{ . | absURL }}" hidden></data>{{ end }}
+
 {{ .Site.Params.about | .RenderString }}
 
 {{ range $links := .Site.Params.links }}
   <p class="horizontal-links">
     {{- range $links.link -}}
       <a href="{{ .href }}"
+       {{ with .rel }} rel="{{ . }}" {{end}}
        {{ if .newTab }} target="_blank" {{end}}
        {{ if .specialEmailLink }} class="email-hook" id="about-email" title="Click to show email" {{end}}
       >
@@ -12,3 +19,4 @@
     {{- end -}}
   </p>
 {{ end }}
+</div>

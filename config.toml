@@ -13,6 +13,8 @@ summaryLength = 0
     unsafe= true
 
 [params]
+  author = "Sid Verma"
+  avatar = "/icons/me.jpg"
   colorScheme = "auto"
   customCSS = ["/css/style.css"]
   favicon = "/icons/favicon.ico"
@@ -43,10 +45,12 @@ Email me if you'd like to work together. _Or if you just wanna chat._
       specialEmailLink = true
     [[params.links.link]]
       name = "Github"
+      rel = "me"
       href = "https://github.com/mavidser"
       newTab = true
     [[params.links.link]]
       name = "Instagram"
+      rel = "me"
       href = "https://instagram.com/mavidser"
       newTab = true
 
