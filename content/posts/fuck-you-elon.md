@@ -34,3 +34,8 @@ WTF. I search ‘Sky’. Nothing. I search ‘Space’.
 > SpaceX successfully launches 60 satellites at once.
 
 Fuck you Elon.
+
+
+---
+
+This was written as a writing prompt at [IndieWebBlr](https://indieweb.org/Bangalore).
