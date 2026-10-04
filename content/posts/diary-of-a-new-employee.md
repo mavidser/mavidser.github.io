@@ -10,19 +10,19 @@ Today was my first day at this stealth startup. The boss (CEO) is a dick, but we
 
 #### Tuesday
 
-Surprisingly, I feel halfway through my induction already. Things happen at such a fast pace here that it's a bit exhilarating. Some areas definitely need much more oversight though. Just a few weeks ago, a field employee had an accident, which led to us getting sued for millions of $$. Thank fuck for insurance.
+Surprisingly, I feel like I'm halfway through my induction already. Things happen at such a fast pace here that it's a bit exhilarating. Some areas definitely need much more oversight though. Just a few weeks ago, a field employee had an accident, which led to us getting sued for millions of $$. Thank fuck for insurance.
 
-In other news, I met the rest of the systems team today. I was expecting to go through some sort of imposter syndrome, working in such a lean team, but looks like that these guys aren't that much better than me. Except for Dennis, Dennis is the _GOAT_!
+In other news, I met the rest of the systems team today. I was expecting to go through some sort of imposter syndrome, working in such a lean team, but it looks like these guys aren't that much better than me. Except for Dennis. Dennis is the _GOAT_!
 
 #### Wednesday
 
 We got news that some outside "experts" would be coming in over the weekend for inspection. Most likely in response to the concerns of investors and the insurance company over the lawsuit. VCs are sending this mathematician who deals with risk-prediction models (I think?). On the other hand, John, our CEO, is also bringing in some famous academics who'd likely give us the required endorsement without much fuss.
 
-Got to know more of my team today. Ray's the cheif engineer. Good guy, heavy smoker. We really need a policy against smoking indoors here. This is not the 80s. Dennis turned out to be a bit of an ass though. There's a lot of misplaced ego in him for building the system foundation.
+Got to know more of my team today. Ray's the chief engineer. Good guy, heavy smoker. We really need a policy against smoking indoors here. This is not the 80s. Dennis turned out to be a bit of an ass though. There's a lot of misplaced ego in him for building the system foundation.
 
 #### Thursday
 
-Induction got over, and today's my first _real_ day at work. Now I have some clarity on how we've been doing things so fast. Systems seem to be well-built on the surface, but we have almost no testing protocols, no failover plans, and tons of single point of failures. And there don't seem to be a lot of access controls in place too. We have all this high-tech environment, and almost any employee can shut down the system if they know no where to do it from.
+Induction is over, and today's my first _real_ day at work. Now I have some clarity on how we've been doing things so fast. Systems seem to be well-built on the surface, but we have almost no testing protocols, no failover plans, and tons of single points of failure. And there don't seem to be a lot of access controls in place either. We have all this high-tech environment, and almost any employee can shut down the system if they know where to do it from.
 
 On the plus side, the to-do list has points listing these problems. Though it's unlikely anyone's getting around to those anytime soon.
 
@@ -36,15 +36,15 @@ My shift just ended, and it's been a smooth day so far. The family turned out to
 
 The tour had more kinks than we were expecting today. Ray's been counting every glitch that he comes across today, and was up to 151 the last time I checked. "We have all the problems of a major theme park and a major zoo and the computers aren't even on their feet yet", his exact words.
 
-To be very honest, I think he gives the system way less credit than its due. Sure, it's far from perfect, but given the timeline, the company really spared no expense in building this place.
+To be very honest, I think he gives the system way less credit than it's due. Sure, it's far from perfect, but given the timeline, the company really spared no expense in building this place.
 
 #### Sunday
 
 HOLY FUCK! **WHAT THE FUCK!** FUUUUUCK!
 
-I'm writing this entry in the morning itself, as I'm not sure if I'm gonna find the time again. There's a fair chance that we'd get shut down by tomorrow, if we don't get arrested or get eaten by a stray disnoaur.
+I'm writing this entry in the morning itself, as I'm not sure if I'm gonna find the time again. There's a fair chance that we'd get shut down by tomorrow, if we don't get arrested or get eaten by a stray dinosaur.
 
-We don't have a complete clarity on what's happening. Power went out in most of the park yesterday, and is still out. Cage fences aren't working, and even the phone lines are down! Wireless seems to be fucked too because of a very coincidental storm.
+We don't have complete clarity on what's happening. Power went out in most of the park yesterday, and is still out. Cage fences aren't working, and even the phone lines are down! Wireless seems to be fucked too because of a very coincidental storm.
 
 It appears that Dennis shut down the electrical grids yesterday and fled this island. No one knows why. We even seem to be locked out of the control systems. With no documentation, logs and system access, we're probably not gonna be fixing this anytime soon.
 

@@ -12,7 +12,7 @@ I spent a lot of time today reading the specifications of Indian electrical sock
 
 Indian electrical sockets are defined by the **IS 1293** specification, as defined by BIS (Bureau of Indian Standards). You can find the contents of the standard here:
 - [IS 1293 : 2005][2005] - PDF of the third revision of the standard from 2005. This is not the latest version, but this is the only PDF I could find freely available.
-- [IS 1293 : 2019][2019] - You'd have to create an account to access the latest version from 2019. It is a free download after, for personal use.
+- [IS 1293 : 2019][2019] - You'd have to create an account to access the latest version from 2019. It is a free download after that, for personal use.
 
 The standard specifies the details of plugs and sockets used for household devices (devices which draw up to 16A current). The standard goes into details about almost every aspect of the plugs and sockets, but this article cares only about the different socket layouts.
 
@@ -24,7 +24,7 @@ Now, onto the different sockets shown in the image above:
 
 - **Socket II** - This is a 3-pole socket, which is rated for up to 6A. It is basically the same socket layout as **I**, but with an additional earth pin, which is 7.06mm wide and 20.6mm long, at a distance of 22.2mm from the other two pins.
 
-- **Socket III** - This is an outdated socket. It is a combination of standard 6A **Socket II**, along with an old form of a 2.5A socket which had the pins 16.50mm apart. That latter one was removed from the standard in 2019, and should hardly have any supported devices nowadays.
+- **Socket III** - This is an outdated socket. It is a combination of the standard 6A **Socket II**, along with an old form of a 2.5A socket which had the pins 16.50mm apart. That latter one was removed from the standard in 2019, and should hardly have any supported devices nowadays.
 
 - **Socket IV** - This is a 3-pole socket, which is rated for up to 16A. All the dimensions are bigger for this socket - with the live and neutral pins being 7.06mm wide, 20.6mm long and 25.4mm apart. The earth pin is 8.71mm wide, 28.6mm long, at a distance of 28.6mm from the other two pins.
 
@@ -32,7 +32,7 @@ Now, onto the different sockets shown in the image above:
 
 - **Socket VI** - This is a common kind of socket found in some places, which conforms to no standard. It attempts to combine many different kinds of sockets from around the world. In India, most of these would be rated for 6A and will be compatible with **Socket II**. There are a lot of articles on the internet which explain why universal sockets can be unsafe, which you should look up for more info.
 
-And that's it. This is not my favorite kind of socket layout, but its the one we got. The best one, in my opinion is the British **BS 1363** system - which requires compulsory shutters in the sockets, and the plugs have fuses built into them, as well as mandatory insulation at the base of the pins. They are also impossible to plug in sideways due to the rectangular design.
+And that's it. This is not my favorite kind of socket layout, but it's the one we got. The best one, in my opinion, is the British **BS 1363** system - which requires compulsory shutters in the sockets, and the plugs have fuses built into them, as well as mandatory insulation at the base of the pins. They are also impossible to plug in sideways due to the rectangular design.
 
 [2005]: https://archive.org/details/gov.in.is.1293.2005/page/n3/mode/2up
 [2019]: https://standardsbis.bsbedge.com/BIS_SearchStandard.aspx?Standard_Number=IS%201293&id=4577

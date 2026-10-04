@@ -13,7 +13,7 @@ Hillhacks, [as defined by the website][hillhacks]:
 >
 > In the hacking, we get hacked ourselves.<br>
 
-Hackbeach is the sister event of hillhacks, held in the winters, on one of India's coast.
+Hackbeach is the sister event of hillhacks, held in the winters, on one of India's coasts.
 
 What we don't have:
 - Sponsors
@@ -31,18 +31,18 @@ What we have:
 - Space to camp
 - Beautiful views
 - A long unconference
-- 2-4 day of main conference
+- 2-4 days of main conference
 - Setup and teardown of the said conference
 - Talks and flash talks
 - Opportunities to learn new skills
 - Hackers
 
 What we might also have:
-- Accountants, Anthropologist, Farmers, Activists, Geologists...
+- Accountants, Anthropologists, Farmers, Activists, Geologists...
 - School programs to teach young kids about science and technology
 - Cooking
 - Slacklining
-- Hoola hoop lessons
+- Hula hoop lessons
 - Board/card games
 - Quiz nights
 - Hiking in the hills
@@ -50,8 +50,8 @@ What we might also have:
 - Paragliding
 - Sleeping on the sandy beaches
 - Cartons of all you can grab stickers
-- Open discusssions across a variety of subjects
-- Demostration of cool projects
+- Open discussions across a variety of subjects
+- Demonstration of cool projects
 
 [Hillhacks][1] \| [Hackbeach][2]
 

@@ -4,9 +4,9 @@ date: 2015-01-03
 tags: ["tech"]
 ---
 
-I love Sublime Text. I really do. I can put a ring on it if it had any corporeal form. I've been using it so much, that trying to work on anything else is kind of a pain. And yet, when dealing with STDIN inputs, the magic falters. This method describes a workaround to give inputs without a prompt.
+I love Sublime Text. I really do. I would put a ring on it if it had any corporeal form. I've been using it so much that trying to work on anything else is kind of a pain. And yet, when dealing with STDIN inputs, the magic falters. This method describes a workaround to give inputs without a prompt.
 
-Recently, I tried my hand on Competitive Programming, and though I didn't get really good at it, I did encounter a frustation. Entering the same input again and again after every change I make to the code. I wanted a simpler method.
+Recently, I tried my hand at Competitive Programming, and though I didn't get really good at it, I did encounter a frustration. Entering the same input again and again after every change I make to the code. I wanted a simpler method.
 
 Here's what a friend of mine came up with: Enter the input in comments.
 
@@ -45,9 +45,9 @@ echo "input" | python program.py
 
 I started jotting down a list of things I needed to add to the plugin. The first thing was to make the execution asynchronous. I couldn't let the whole editor hang when a program's under execution. Also, to be able to kill programs. And proper error reporting, platform independency, etc.
 
-It turns out all these things were already implemented, in the default build system of Sublime Text itself. I decided to merge my plugin it.
+It turns out all these things were already implemented, in the default build system of Sublime Text itself. I decided to merge my plugin into it.
 
-Apart from things like input extraction, handling filenames, the behavious of things in Windows, etc, the main trick was changing
+Apart from things like input extraction, handling filenames, the behaviour of things in Windows, etc, the main trick was changing
 
 {{< highlight python >}}
 self.proc = subprocess.Popen(["/bin/bash", "-c", shell_cmd],

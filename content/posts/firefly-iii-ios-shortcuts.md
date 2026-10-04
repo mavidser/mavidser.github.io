@@ -4,7 +4,7 @@ date: 2019-12-06
 tags: ["tech"]
 ---
 
-I've been using the excellent [Firefly III][firefly] to manage my expenses for a while. As a result, I have developed a habit to actively monitor every transaction I do, which, in my opinion is a much better way than using other automated expense managers which can only track your non-cash expenses, without a lot of context.
+I've been using the excellent [Firefly III][firefly] to manage my expenses for a while. As a result, I have developed a habit of actively monitoring every transaction I do, which, in my opinion, is a much better way than using other automated expense managers which can only track your non-cash expenses, without a lot of context.
 
 Android had an [unofficial app][android-app] which made it easier to interact with Firefly, but iOS doesn't seem to have one, and the web-ui is not a very mobile friendly one.
 
@@ -33,7 +33,7 @@ If you're not into categories, you'd probably have to edit the _Add Transaction_
 
 Note that, to be able to import shortcuts from outside the app gallery, you have to go to _Settings_ > _Shortcuts_ and enable _Allow Untrusted Shortcuts_.
 
-While adding these shortcuts, you'd be prompted to enter your firefly URL and Personal Access Token for each of the shortcut. The URL is where you've hosted the app, complete with the protocol and without a trailing slash (like `https://demo.firefly-iii.org`). You can generate the token from Firefly by going to _Options_ > _Profile_ > scroll down to _Personal Access Tokens_ and click on _Create New Token_.
+While adding these shortcuts, you'd be prompted to enter your firefly URL and Personal Access Token for each of the shortcuts. The URL is where you've hosted the app, complete with the protocol and without a trailing slash (like `https://demo.firefly-iii.org`). You can generate the token from Firefly by going to _Options_ > _Profile_ > scroll down to _Personal Access Tokens_ and click on _Create New Token_.
 
 After spending 3 hours creating these 150-step shortcuts on a very tiny screen, I was wondering if it'd have been easier to create a basic iPhone app itself. Not really, I don't know Swift yet.
 

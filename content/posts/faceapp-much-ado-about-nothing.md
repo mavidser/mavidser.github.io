@@ -15,7 +15,7 @@ tags: ["tech"]
 > > You might end up on a billboard somewhere in Moscow, but your face will most likely end up training some AI facial-recognition algorithm.
 
 
-For context, here's the lines from [FaceApp's Terms of Service][faceapp] which are been targeted:
+For context, here are the lines from [FaceApp's Terms of Service][faceapp] which are being targeted:
 
 > <sub>You grant FaceApp a perpetual, irrevocable, nonexclusive, royalty-free, worldwide, fully-paid, transferable sub-licensable license to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, publicly perform and display your User Content and any name, username or likeness provided in connection with your User Content in all media formats and channels now known or later developed, without compensation to you. When you post or otherwise share User Content on or through our Services, you understand that your User Content and any associated information (such as your [username], location or profile photo) will be visible to the public.</sub>
 

@@ -15,7 +15,7 @@ This post might seem like nitpicking, or unnecessary to a lot of people, but it'
 
 - Even when you are using `<a>` tags:
   - If possible, execute whatever JS you want, and then let the link do its job. Don't `preventDefault()` and open the link through javascript.
-  - If you really have to open it through JS, take care of Ctrl-clicks. And Cmd-clicks in case of macOs. [Old browsers might make this difficult][key-madness].
+  - If you really have to open it through JS, take care of Ctrl-clicks. And Cmd-clicks in case of macOS. [Old browsers might make this difficult][key-madness].
 
 - Put `mailto:` links only where the email-id is the visible text too. [foo@bar.com][email-good] is so much better than [Contact Email][email-bad]. Not everyone has email clients configured, and opening bulky clients when clicking a link is just bad UX. Or people might just want to note down the address, to contact later.
 

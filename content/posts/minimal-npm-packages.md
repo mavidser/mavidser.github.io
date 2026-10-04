@@ -6,7 +6,7 @@ tags: ["tech"]
 
 A follow up to [my previous post][prev-post], this time we look into some of the lesser known, but widely used javascript packages.
 
-Javascript's NPM package manager, is one of the [biggest and fastest growing][modulecounts] package manager out there. As of writing this:
+Javascript's NPM package manager is one of the [biggest and fastest growing][modulecounts] package managers out there. As of writing this:
 - RubyGems - 145,675 (25 new packages/day)
 - PyPI - 149,111 (104 new packages/day)
 - Packagist - 191,577 (103 new packages/day)
