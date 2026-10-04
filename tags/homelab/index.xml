@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>homelab on Sid Verma</title><link>https://sidverma.io/tags/homelab/</link><description>Recent content in homelab on Sid Verma</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 03 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sidverma.io/tags/homelab/index.xml" rel="self" type="application/rss+xml"/><item><title>Comparing tools to connect your devices in a mesh VPN</title><link>https://sidverma.io/posts/homelab-mesh-vpn/</link><pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/homelab-mesh-vpn/</guid><category>homelab</category><category>tech</category><description>&lt;p>I have a nice little computer in my house which hosts a bunch of services I use. It sits behind a NAT, so I can&amp;rsquo;t connect directly to it via my public IP address. Hence, I use a cheap cloud instance on DigitalOcean to act as the gateway for my home-server to the internet.&lt;/p>
+&lt;p>My &lt;a href="https://sidverma.io/2020/01/11/personal-infrastructure-overview/#how-things-actually-connect">previous setup&lt;/a> was basically a VPN tunnel between a cloud server and my home server, where the cloud server forwarded TCP traffic to my home server, which served all my services.&lt;/p>
+&lt;p>Lately, I&amp;rsquo;ve been rebuilding this infrastructure, and one of the things I was due for was to have all my devices (my cloud server, home server, laptop, phone, etc) connected to each other all the time. Also, it needed to be in a mesh instead of hub-and-spoke, as there was no need for data to go over the internet if I&amp;rsquo;m home, on the same physical network as my home-server.&lt;/p>
+&lt;p>I spent a good amount of time trying out a bunch of methods, before settling on one. This post runs through all the options I found, and why I chose what I chose. I won&amp;rsquo;t go into how to set it up - there should be plenty of articles and documentation on the internet.
+TLDR: I now use tailscale with a headscale server.&lt;/p>
+&lt;hr>
+&lt;h3 id="wireguard">Wireguard&lt;/h3>
+&lt;p>There&amp;rsquo;s a bunch of ways to do mesh VPN as of writing this. One obvious one is to use &lt;a href="https://www.wireguard.com/quickstart/" target="_blank">Wireguard&lt;/a>, which is what I set up first. However, one drawback of it, for my use-case, is that peers need an IP address to connect to. Since my IPv4-first ISP puts me behind a NAT, I was unable to do that. So, I had to choose between routing what-could-be local traffic over the internet, or having local peers and only connect to VPN when I&amp;rsquo;m at home. Neither was a good solution for me.&lt;/p>
+&lt;p>&lt;a href="https://www.jordanwhited.com/posts/wireguard-endpoint-discovery-nat-traversal/" target="_blank">This wonderful post&lt;/a> by Jordan Whited uses a STUN mechanism to do IP discovery with wireguard, but I don&amp;rsquo;t want to take on the burden of compiling CoreDNS every time I perform upgrades. If that&amp;rsquo;s something you&amp;rsquo;re okay with, I&amp;rsquo;d highly suggest giving it a try - it&amp;rsquo;s exceptionally neat.&lt;/p>
+&lt;h3 id="netmaker">Netmaker&lt;/h3>
+&lt;p>&lt;a href="https://www.netmaker.org/" target="_blank">Netmaker&lt;/a> is another wonderful tool, which is very performant and incredibly easy to set up. It even includes a web-app where you can manage all the nodes. I would recommend this if you don&amp;rsquo;t want your phone to be a part of the mesh. Netmaker uses its own &lt;code>netclient&lt;/code> to connect nodes, and there&amp;rsquo;s no such client for Android/iOS, &lt;a href="https://github.com/gravitl/netmaker/discussions/631" target="_blank">as of writing this&lt;/a>. You can technically add a phone as an &amp;lsquo;external device&amp;rsquo; via wireguard, but then the phone always uses a specific ingress server to access the VPN, and won&amp;rsquo;t connect directly to a node even when on the same physical network.&lt;/p>
+&lt;h3 id="tailscaleheadscale">Tailscale/Headscale&lt;/h3>
+&lt;p>&lt;a href="https://tailscale.com/" target="_blank">Tailscale&lt;/a> is one of the popular Mesh-VPN service providers. It&amp;rsquo;s built on top of wireguard, and uses its own coordination servers to keep track of your devices (a very good write-up of how it does that &lt;a href="https://tailscale.com/blog/how-nat-traversal-works/" target="_blank">here&lt;/a>). It has a very stable android client which has worked without issues for me. And more importantly, the official open-source clients support the third-party open-source coordination server, &lt;a href="https://github.com/juanfont/headscale" target="_blank">headscale&lt;/a>, which I use. The official tailscale server is not open-source, but headscale hasn&amp;rsquo;t given me any issues yet. Tailscale isn&amp;rsquo;t the most performant option out there, but it has been very reliable in maintaining a connection between devices even when they hop between networks (sometimes spotty LTE). I hear the performance is gonna &lt;a href="https://tailscale.com/blog/throughput-improvements/" target="_blank">increase soon&lt;/a> too, so that&amp;rsquo;s nice.&lt;/p>
+&lt;h3 id="also-nebula-zerotier">Also: Nebula, ZeroTier&lt;/h3>
+&lt;p>Two more tools need to be mentioned here.&lt;/p>
+&lt;p>&lt;a href="https://github.com/slackhq/nebula" target="_blank">Nebula&lt;/a> is developed by Slack, and builds a similar mesh overlay network. It seems simpler in design; however, I had a hard time with the Android client, which sometimes would just not form connections. It could have been just a momentary bug, or a configuration error, but I moved past it very quickly. YMMV.&lt;/p>
+&lt;p>&lt;a href="https://www.zerotier.com/" target="_blank">Zerotier&lt;/a> is very similar to Tailscale too. It uses its own custom protocol instead of wireguard, and works in a similar way. Zerotier&amp;rsquo;s controller server is open source, and can be self-hosted. In my testing, it took longer to reconnect after a network change, and also took more time to figure out the optimal route to a peer, but otherwise it behaved quite the same. It was more performant than tailscale though, with lower ping-times and higher transfer speeds locally (albeit with more packet loss). I would have been happy with it too, and might try it again if tailscale fucks up at some point. So far, I&amp;rsquo;ve gone with tailscale mostly because of the trusted wireguard as base, and reliability of clients handling reconnections.&lt;/p></description></item><item><title>Personal infrastructure overview</title><link>https://sidverma.io/posts/personal-infrastructure-overview/</link><pubDate>Sat, 11 Jan 2020 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/personal-infrastructure-overview/</guid><category>homelab</category><category>tech</category><description>&lt;p>Writing intros to posts is such a hard thing. I&amp;rsquo;ve spent more time on what to write in this paragraph than the rest of this article. You&amp;rsquo;re supposed to start with a background and a motivation, and conclude with a sentence that you finally did it, and here is how.&lt;/p>
+&lt;p>I have not &lt;em>done it&lt;/em> yet. This thing keeps evolving. As to why I started doing this: it&amp;rsquo;s fun. It&amp;rsquo;s fun and powerful to be in control of where your information resides. It&amp;rsquo;s fun to build a system to manage this efficiently. There are some benefits too: much more control over my data and the services. These are also all open-source so I can add missing features which I really really want, and I don&amp;rsquo;t have to abide by the restrictive terms and limits of other platforms. And I don&amp;rsquo;t lose everything if a platform wants to shut itself down or delete my account for using their product wrong.&lt;/p>
+&lt;p>As for the disadvantages: Only a few services look as polished as their commercial counterparts. It costs money to host them yourself. Mobile apps are rare. You have to think about security yourself. And if things go wrong, you only have yourself to blame.&lt;/p>
+&lt;hr>
+&lt;p>Most of my services reside across two servers, which are named &lt;strong>HAL-9000&lt;/strong> and &lt;strong>SAL-9000&lt;/strong>.&lt;/p>
+&lt;p>&lt;em>HAL&lt;/em> is a Raspberry Pi 4 connected to a single HDD, and acts as a tiny media server for personal use. It runs:&lt;/p>
+&lt;ul>
+&lt;li>A samba server (allows the HDD to be available as a Windows share)&lt;/li>
+&lt;li>A DLNA server (most good media players can use this to get a media index off a server)&lt;/li>
+&lt;li>A Calibre web server (for serving eBooks indexed by Calibre)&lt;/li>
+&lt;li>Jellyfin (open source alternative to Plex, to organize media)&lt;/li>
+&lt;li>A suite of services for downloading media (Radarr, Sonarr, Jackett, Transmission)&lt;/li>
+&lt;li>Syncthing (a P2P file synchronization service)&lt;/li>
+&lt;li>Tinc VPN (to make this server reachable over the internet)&lt;/li>
+&lt;li>Some monitoring services (explained later).&lt;/li>
+&lt;/ul>
+&lt;figure>
+&lt;img src="https://sidverma.io/images/hal-9000.jpg"
+alt="HAL resides in a makeshift housing, connected to a cool status screen"/> &lt;figcaption>
+&lt;p>HAL resides in a makeshift housing, connected to a cool status screen&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>&lt;em>SAL&lt;/em> runs a lot more services, which I&amp;rsquo;ll refrain from listing here, as I keep adding and removing them over time. The most used ones are:&lt;/p>
+&lt;ul>
+&lt;li>Mailman (for hosting a couple of private mailing lists)&lt;/li>
+&lt;li>Lounge + ZNC (A web IRC client for non-primary machines, and a bouncer for everywhere else)&lt;/li>
+&lt;li>Firefly III (Favorite expense manager)&lt;/li>
+&lt;li>Dokuwiki (As a personal knowledge base, also used as an idea-book and journal)&lt;/li>
+&lt;li>Wallabag (A self-hosted alternative to Pocket, the read-it-later thing)&lt;/li>
+&lt;li>FreshRSS (RSS reader with a decent frontend and Fever API support)&lt;/li>
+&lt;li>Radicale (A tiny cardDAV and calDAV server for syncing my contacts and calendars)&lt;/li>
+&lt;li>Kanboard (Kanban boards)&lt;/li>
+&lt;li>Tmate (an amazing tool which lets you share your current shell session with anyone else, over ssh)&lt;/li>
+&lt;/ul>
+&lt;p>The complete list of services can be found in the terraform files &lt;a href="https://github.com/mavidser/odyssey/tree/master/terraform/sal-9000" target="_blank">here&lt;/a>.&lt;/p>
+&lt;h2 id="internal-details">Internal details&lt;/h2>
+&lt;p>All of these services run in their own docker containers. This is a primary requirement for me, and I went to great lengths to make sure that nothing runs outside of containers. Reasons are:&lt;/p>
+&lt;ul>
+&lt;li>&lt;em>Easier management&lt;/em>: I can store every configuration as static files, which can spin up and configure containers that are ready to go. &lt;a href="https://sidverma.io/2019/11/15/sysadmin-terraform/">I use terraform for this&lt;/a>. Observing the state of my server becomes a breeze too.&lt;/li>
+&lt;li>&lt;em>Easier backups&lt;/em>: I have to back up only the mounted volumes, which greatly reduces the backup sizes, and can be backed up predictably too.&lt;/li>
+&lt;li>&lt;em>Easier Upgrades&lt;/em>: Upgrading services is as easy as updating the docker image tag. I don&amp;rsquo;t have to worry about how things might break. And if they do, I can just go back to the earlier version without a hiccup.&lt;/li>
+&lt;li>&lt;em>Security&lt;/em>: Due to the isolated nature of containers, I feel much safer running everything in containers, knowing that they don&amp;rsquo;t speak to each other unless I want them to.&lt;/li>
+&lt;li>&lt;em>Reproducibility&lt;/em>: To set it up anew, all I have to do is install and configure docker, make sure the OS itself is secure, and then my terraform files can take it from there. I rarely have to ever SSH into my host to make infrastructure changes.&lt;/li>
+&lt;li>&lt;em>Monitoring&lt;/em>: A linux system in use has tons of processes running, and to monitor your services, you have to filter through everything, identify which processes are used by which service/user, and so much more. Using containers, I can just look at the resources the container uses.&lt;/li>
+&lt;/ul>
+&lt;figure>
+&lt;img src="https://sidverma.io/images/sal-grafana.png"
+alt="Monitoring page of SAL-9000"/> &lt;figcaption>
+&lt;p>Monitoring page of SAL-9000&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h3 id="how-things-actually-connect">How things actually connect&lt;/h3>
+&lt;p>My home network sits behind my ISP&amp;rsquo;s NAT, so &lt;em>HAL&lt;/em> cannot be reached directly from the Internet. To make it accessible, I use a VPN connection (tinc) between &lt;em>HAL&lt;/em> and &lt;em>SAL&lt;/em> to bridge the two servers, making &lt;em>HAL&lt;/em> locally accessible from &lt;em>SAL&lt;/em>. In this network, &lt;em>HAL&lt;/em> gets the IP &lt;code>10.0.0.2&lt;/code> while &lt;em>SAL&lt;/em> is &lt;code>10.0.0.1&lt;/code>. This allows me to directly tunnel traffic from &lt;em>SAL&lt;/em> to &lt;em>HAL&lt;/em>, making it available over the internet.&lt;/p>
+&lt;p>Tunneling all traffic, though, would mean that services on &lt;em>SAL&lt;/em> would be inaccessible. As it&amp;rsquo;s not guaranteed that all traffic can be identified, I cannot do this selectively for services either. The solution was to get a Floating IP on DigitalOcean and attach it to &lt;em>SAL&lt;/em>. Floating IPs are reassignable IP addresses, which can be attached to running instances.&lt;/p>
+&lt;p>&lt;em>SAL&lt;/em> now has two public IP addresses, the floating IP and the instance&amp;rsquo;s own public IP. The floating IP connects to &lt;em>SAL&lt;/em> through what DigitalOcean calls an Anchor IP, which is added as an alias to the default interface. Now, I can use two different IP addresses to reach my &lt;em>SAL&lt;/em>. One by using the &lt;em>SAL&lt;/em>&amp;lsquo;s public IP, and the other via the floating IP (anchor IP on the instance).&lt;/p>
+&lt;pre>&lt;code> +-------------------+
+| SAL-9000 |
+| +---------------+ |
+| | eth0 | |
+| | | |
+Internet ------------&amp;gt;| 159.65.147.19 | |
+| | | public IP | |
+| | | | |
+V | | | |
+139.59.52.106 -------&amp;gt;| 10.47.0.5 | |
+Floating IP | | anchor IP | |
+| +---------------+ |
++-------------------+
+&lt;/code>&lt;/pre>&lt;p>My DNS configuration says that &lt;code>*.hal-9000&lt;/code> should point to the floating IP, while &lt;code>*.sal-9000&lt;/code> should point to the &lt;em>SAL&lt;/em>&amp;lsquo;s public IP.&lt;/p>
+&lt;p>I use HAProxy to redirect traffic received on the anchor IP to &lt;em>HAL&lt;/em> at &lt;code>10.0.0.2&lt;/code> over the VPN, and keep the rest on the instance itself. This could be easily done with iptables too, but I wanted all configurations to live in Terraform, hence HAProxy. I&amp;rsquo;ll be switching to iptables as soon as I add support for them in the &lt;a href="https://github.com/mavidser/terraform-linux-provider" target="_blank">Linux Provider&lt;/a>.&lt;/p>
+&lt;p>Once this step is cleared on both servers, all the traffic is forwarded to their respective docker containers. HTTP and TLS traffic, though, all goes to traefik, a reverse proxy with amazing support for Docker (with discovery), ACME, and some capable middlewares. Any container which needs to listen to HTTP or decrypted TCP traffic registers itself with traefik and is ready to go. My traefik config is using Let&amp;rsquo;s Encrypt to get signed TLS certificates.&lt;/p>
+&lt;h3 id="monitoring">Monitoring&lt;/h3>
+&lt;p>The following five services make up the monitoring stack of these servers:&lt;/p>
+&lt;ul>
+&lt;li>&lt;em>prometheus&lt;/em> as the time-series database for storing all metrics&lt;/li>
+&lt;li>&lt;em>node-exporter&lt;/em> to export system metrics to prometheus&lt;/li>
+&lt;li>&lt;em>cadvisor&lt;/em> exports metrics of docker containers to prometheus&lt;/li>
+&lt;li>&lt;em>loki&lt;/em> for storing logs of services&lt;/li>
+&lt;li>&lt;em>promtail&lt;/em> to put docker logs from the filesystem into loki&lt;/li>
+&lt;/ul>
+&lt;p>Data from both the servers&amp;rsquo; prometheus and loki is displayed on a Grafana instance running on &lt;em>SAL&lt;/em>, which is also used for some rudimentary alerting.&lt;/p>
+&lt;p>A friend once asked why I was using separate loki and prometheus to store data for different servers, when one could suffice. It&amp;rsquo;s so that &lt;em>HAL&lt;/em> can continue to write metrics to its own databases even in case of internet disruption at my home.&lt;/p>
+&lt;h3 id="backups">Backups&lt;/h3>
+&lt;p>I use restic to back up all my docker volumes to Backblaze. Restic is able to deduplicate blobs too, so the total capacity used for backups is less than the sum of all the backups.&lt;/p>
+&lt;h2 id="things-i-dont-host-myself">Things I don&amp;rsquo;t host myself&lt;/h2>
+&lt;p>I am using Migadu as my email provider for now, but plan to try hosting it myself on a separate server later this year.
+I also use PIA as my VPN provider instead of hosting my own VPN server, mostly because I switch between regions often, and it was cheaper to use PIA than run VPN instances in different regions.&lt;/p>
+&lt;h2 id="how-much-does-it-cost-me">How much does it cost me?&lt;/h2>
+&lt;div style="font-size: 0.88em;" markdown="1">
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Service&lt;/th>
+&lt;th>Cost&lt;/th>
+&lt;th>Notes&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Domain name&lt;/td>
+&lt;td>$30/year&lt;/td>
+&lt;td>Depending on the TLD, it can be $0 to $$$&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Cloud Server&lt;/td>
+&lt;td>$240/year&lt;/td>
+&lt;td>I have a DigitalOcean instance with 4GB memory. A 512MB one costs $60/year&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Email&lt;/td>
+&lt;td>$48/year&lt;/td>
+&lt;td>I use migadu for my emails. It&amp;rsquo;s a Swiss provider which allows you to have multiple custom domains as long as you don&amp;rsquo;t send tons of emails every day. I&amp;rsquo;d strongly recommend that you use your own domain for emails, to keep them migratory. But, if you don&amp;rsquo;t wanna shell out, you can go with free email providers too (Fastmail is pretty good), or maybe what &lt;a href="https://www.dannyguo.com/blog/using-mailgun-for-a-free-custom-domain-email-address/" target="_blank">Danny recommends&lt;/a> if you really want that domain&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Backup storage&lt;/td>
+&lt;td>$0/year&lt;/td>
+&lt;td>The 10GB free tier of Backblaze is able to store all my backups for now. It&amp;rsquo;s still pretty cheap at 0.5c/GB when it exceeds that limit though&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Electricity&lt;/td>
+&lt;td>$15/year&lt;/td>
+&lt;td>Raspberry Pi running at 135kWh/year at 10c/kWh&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>VPN&lt;/td>
+&lt;td>$40/year&lt;/td>
+&lt;td>I use PIA as my VPN provider. Alternatively, you can set up a VPN server on your machine too, if it fits your threat model and you don&amp;rsquo;t require all the different regions supported by PIA&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Total&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>$373/year&lt;/strong>&lt;/td>
+&lt;td>&lt;em>If you just go with a small cloud server, and a cheap domain, you can probably bring this down to $61/year. If your home IP is not behind a NAT (static IP, or dynamic DNS), you can host this at your home too, bringing it down to just the hardware and electricity costs.&lt;/em>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/div>
+&lt;p>Host things yourself. It&amp;rsquo;s fun.&lt;/p></description></item><item><title>Doing sysadmin things through Terraform</title><link>https://sidverma.io/posts/sysadmin-terraform/</link><pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate><guid>https://sidverma.io/posts/sysadmin-terraform/</guid><category>homelab</category><category>tech</category><description>&lt;p>&lt;em>Disclaimer: I have not worked as a sysadmin anywhere in my professional life, nor do I consider myself to be very good at it.&lt;/em>&lt;/p>
+&lt;p>I&amp;rsquo;ve self-hosted a small part of my personal infrastructure (IRC bouncer, VPN server, torrent client, etc) for a while now.
+These services were set up over the course of a week on the tiniest DigitalOcean instance five years ago, never to be touched again for the next three years.&lt;/p>
+&lt;p>Two years ago, at &lt;a href="https://hackbeach.in" target="_blank">Hackbeach 2017&lt;/a>, &lt;a href="https://twitter.com/aruns89" target="_blank">Arun Singh&lt;/a> gave a small talk on Infrastructure as code and &lt;a href="https://www.terraform.io" target="_blank">Terraform&lt;/a>. Around then, I had recently started frequenting &lt;a href="https://old.reddit.com/r/selfhosted" target="_blank">/r/selfhosted&lt;/a>, and decided to start self-hosting more of my services. Upon finally logging into my server after three years, I couldn&amp;rsquo;t understand anything about the way it was set up. Port 443 seemed to be occupied by OpenVPN (for punching through restrictive firewalls), which proxied HTTP traffic to HAProxy which proxied it to a web server, and so on.&lt;/p>
+&lt;p>I didn&amp;rsquo;t quite remember how I had set it up, which configurations should be where, and had to go through quite some documentation to get up to speed on navigating the system.&lt;/p>
+&lt;p>This reminded me of the very similar problems that Arun had mentioned, which Terraform was trying to solve. I decided to give it a go, using the &lt;a href="https://www.terraform.io/docs/providers/docker/index.html" target="_blank">Docker provider&lt;/a> to manage all the services.&lt;/p>
+&lt;p>This led to me reworking my entire infrastructure, where every service was deployed via Docker, and managed by Terraform. This included monitoring infrastructure, an RSS reader, a VPN server, a mailing list, etc. Later on, I also started managing my home-server (mostly media related services) with Docker and Terraform, with the former server acting as the edge node of it. Even the DNS rules related to the infrastructure (domain names of the various services, mail-server related records, etc) are now managed by Terraform using the &lt;a href="https://www.terraform.io/docs/providers/cloudflare/index.html" target="_blank">Cloudflare provider&lt;/a>.&lt;/p>
+&lt;p>Even after all this, I noticed that I sometimes still had to SSH into my server to set up some new services. Upon identifying those, they mostly seemed to be creating users+groups, creating some folders with special permissions, modifying iptables rules, and cleaning up after the services I&amp;rsquo;d removed – deleting the associated users and files/folders they left behind on mounted volumes.&lt;/p>
+&lt;p>This has led to me writing a provider, which I have crudely named &lt;a href="https://github.com/mavidser/terraform-provider-linux" target="_blank">Linux Provider&lt;/a>. I am aware that this is not a remotely accurate name. If you have a better but not restrictive name, feel free to &lt;a id="sysadmin-post-email-1" class="email-hook" href="https://sidverma.io/contact">email&lt;/a> me.&lt;/p>
+&lt;p>&lt;a id='email-text-sysadmin-post-email-1'>&lt;/a>&lt;/p>
+&lt;p>As I am currently the only user I know of, it mostly utilizes commands found in some common linux distros. Mine are Ubuntu and Raspbian.&lt;/p>
+&lt;p>I have now arrived at a state where I don&amp;rsquo;t ever (&lt;em>almost&lt;/em>) have to SSH into my server, to set up, modify, or completely remove a service. I can just delete &lt;code>mailman.tf&lt;/code> and everything related to the setup of my mailserver will be removed from the system (&lt;em>almost&lt;/em> again - explanation below). And I can see everything about my configuration in just a single folder, while navigating around using simple grep commands.&lt;/p>
+&lt;blockquote>
+&lt;p>Explanation for (almost): I am still working on adding more capabilities to the provider. I still have to sometimes log into the machine to modify firewall rules, if dealing with a non-HTTP service. Also note that my motivation is not to never use SSH; it is to make the configuration powerful enough that it doesn&amp;rsquo;t &lt;em>need&lt;/em> me to.&lt;/p>
+&lt;/blockquote>
+&lt;p>Links to the code:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;a href="https://github.com/mavidser/terraform-provider-linux" target="_blank">Terraform Linux Provider&lt;/a>&lt;/strong> - As of writing this, it supports connecting to the client with SSH (key-based or password-based), and managing CRUD operations on files, folders, users and groups. Will keep working on improving this to add more resources.&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://github.com/mavidser/odyssey" target="_blank">Terraform code of the infrastructure&lt;/a>&lt;/strong> - This contains two terraform modules (folders, basically), HAL-9000 and SAL-9000. The former is my home-server, a Raspberry Pi 4, and the latter is a DigitalOcean instance (a basic 4GB RAM one, costs around $20 per month). The home-server runs services like Kodi for media browsing, samba server for sharing the media as a Windows Network Share with everyone connected on the Wi-Fi, monitoring infrastructure, etc. The cloud server would have many more services like a wiki server, IRC clients and bouncer, Finances and social management server, Kanban board, VSCode editor, Wallabag (Pocket alternative), CalDAV and CardDav servers, and some more.&lt;/li>
+&lt;/ul>
+&lt;p>I have shown this to some of my DevOps friends, and not everyone seems to be a fan of it. Common complaints were &amp;ldquo;too much abstraction&amp;rdquo;, which I somewhat agree with, but am fine with, as the pros outweigh the cons for me.&lt;/p>
+&lt;p>Another complaint was that this was adding an unnecessary tool to a system which is usually pretty minimal (just SSH into a server, run a few commands, and log out). My take is that since this works in an agentless way, I can always move back if I ever need to. This gives me an added benefit of using version control to see the system history (and revert changes), have all services+configs be reproducible and in a single folder, and be able to browse my system in a safe and easy way.&lt;/p>
+&lt;p>If you too have some strong reasons why this should not be done, feel free to tell me through &lt;a id="sysadmin-post-email-2" class="email-hook" href="https://sidverma.io/contact">email&lt;/a>.&lt;/p>
+&lt;p>&lt;a id='email-text-sysadmin-post-email-2'>&lt;/a>&lt;/p>
+&lt;!--more--></description></item></channel></rss>
