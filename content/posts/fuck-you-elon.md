@@ -1,7 +1,7 @@
 ---
 title: The one where I witnessed First Contact
 date: 2026-10-03
-tags: ["personal"]
+tags: ["humor"]
 ---
 
 In the summer of 2019, I was visiting Bir, helping out at [Hillhacks](https://hillhacks.in). It’s great fun - You talk tech, art and policy in the day, and sit next to a campfire in the night, perhaps with some peppered-up rice mead.
