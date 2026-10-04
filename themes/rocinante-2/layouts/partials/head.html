@@ -24,6 +24,12 @@
 <link rel="webmention" href="{{ . }}" />
 {{ end }}
 
+{{- $feedTitle := site.Title -}}
+{{- if ne .Title site.Title }}{{ with .Title }}{{ $feedTitle = printf "%s on %s" . site.Title }}{{ end }}{{ end -}}
 {{ range .AlternativeOutputFormats -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink ($feedTitle | htmlEscape) | safeHTML }}
 {{ end -}}
+{{- /* Let every other page discover the site's main feed too */ -}}
+{{ if not .IsHome }}{{ with site.Home.OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="alternate" type="%s" href="%s" title="%s" />` .MediaType.Type .Permalink (site.Title | htmlEscape) | safeHTML }}
+{{ end }}{{ end -}}

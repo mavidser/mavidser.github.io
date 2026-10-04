@@ -15,7 +15,7 @@ Rocinante is a minimal and lightweight theme for hugo. It has minimal non-essent
 - Pagination
 - Tags support
 - Mobile support
-- RSS Feeds
+- RSS feeds with full content (photo albums include their photos): one for the whole site, plus one each for posts, photos, and every tag
 - No essential Javascript
 - Custom CSS support
 - [IndieWeb](https://indieweb.org/) friendly: [microformats2](https://microformats.org/wiki/microformats2) markup (`h-card`, `h-entry`, `h-feed`) and `rel="me"` links
@@ -36,6 +36,7 @@ Put these in the `params` section of config.toml
 
 - **customCSS** - An array of paths to css files in the `assets` directory. Eg: `customCSS = ["css/style.css"]`.
 - **mainSections** - An array containing either `"posts"`, `"photos"` or both. Only the content type listed in the array gets listed on the homepage. Eg: `mainSections = ["post", "photos"]`
+- **homeFeed** - Optional. What the site's main feed (`/index.xml`) contains. `"all"` (default) includes everything in `mainSections`. A section name such as `"posts"` or `"photos"` limits it to that section. Section feeds (`/posts/index.xml`, `/photos/index.xml`) and tag feeds are always available, and are linked from their pages. Eg: `homeFeed = "posts"`
 - **email** - A string which will be used in the `mailto` link if smart email links are being used. Details on smart links are below, in the links option details. Eg: `email = "email@example.com"`
 - **favicon** - A string of the favicon path in the `static` directory.  Eg: `favicon = "icon/favicon.jpg"`
 - **author** - Optional. Your name, used in the microformats `h-card`. Either a string, or a table with a `name` key. Defaults to the site title. Eg: `author = "Alonso Quixano"`
@@ -81,6 +82,7 @@ paginate = 3
 [params]
   colorScheme = "light" # "light" or "dark" or "auto". Defaults to light.
   mainSections = ["posts", "photos"]
+  homeFeed = "all" # "all", or a section like "posts" or "photos". Defaults to all.
   email = "mail@example.com"
   favicon = "icons/favicon.png"
   about = """
@@ -127,7 +129,7 @@ Now enter [`localhost:1313`](http://localhost:1313/) in the address bar of your 
 
 ### Hidden posts:
 
-To hide a post from appearing in the homepage or any other list of posts, add the following to the front matter of the post:
+To hide a post from appearing in the homepage, RSS feeds, or any other list of posts, add the following to the front matter of the post:
 
 ```toml
 hidden: true

@@ -16,6 +16,7 @@ summaryLength = 0
 
 [params]
   mainSections = ["post", "photos"]
+  homeFeed = "all"
   email = "email@example.com"
   favicon = "icon/favicon.jpg"
   about = """

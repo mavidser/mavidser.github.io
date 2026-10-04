@@ -4,6 +4,7 @@
       {{ if ne .Paginator.PageNumber 1 }}
           <h3 class="current-page">Page {{.Paginator.PageNumber}}</h3>
       {{ end }}
+      {{- partial "feed-link.html" . -}}
     </div>
     <hr>
     {{- partial "listcontent.html" . -}}

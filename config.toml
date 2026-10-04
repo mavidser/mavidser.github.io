@@ -21,6 +21,7 @@ summaryLength = 0
   webmention = "https://webmention.io/sidverma.io/webmention"
   socialBanner = "/icons/banner.png"
   mainSections = ["posts", "photos"]
+  homeFeed = "all" # or "posts" / "photos"
   specialEmail = "me@sidverma.io"
   about = """
 Hey friend. I'm <b class="sway">Sid</b>.

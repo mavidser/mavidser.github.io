@@ -1,0 +1,69 @@
+{{- /*
+  RSS feed for the home page, sections (posts, photos) and tags.
+  Items carry the full content, and photo albums include their photos.
+
+  The home feed follows params.homeFeed:
+    "all" (default) - everything in params.mainSections
+    "<section>"     - only that section, e.g. "posts" or "photos"
+*/ -}}
+{{- $pages := slice -}}
+{{- if .IsHome -}}
+  {{- $sections := site.Params.mainSections -}}
+  {{- with site.Params.homeFeed -}}
+    {{- if ne . "all" -}}{{- $sections = slice . -}}{{- end -}}
+  {{- end -}}
+  {{- $pages = where site.RegularPages "Type" "in" $sections -}}
+{{- else if .IsSection -}}
+  {{- $pages = .RegularPages -}}
+{{- else -}}
+  {{- $pages = .Pages -}}
+{{- end -}}
+{{- $pages = where $pages "Params.hidden" "!=" true -}}
+{{- $limit := site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 -}}
+  {{- $pages = $pages | first $limit -}}
+{{- end -}}
+{{- $baseURL := strings.TrimSuffix "/" site.BaseURL -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ if eq .Title site.Title }}{{ site.Title }}{{ else }}{{ with .Title }}{{ . }} on {{ end }}{{ site.Title }}{{ end }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>Recent content {{ if ne .Title site.Title }}{{ with .Title }}in {{ . }} {{ end }}{{ end }}on {{ site.Title }}</description>
+    <generator>Hugo -- gohugo.io</generator>{{ with site.LanguageCode }}
+    <language>{{ . }}</language>{{ end }}{{ with site.Copyright }}
+    <copyright>{{ . }}</copyright>{{ end }}{{ with $pages }}
+    <lastBuildDate>{{ (index . 0).Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+    {{- with .OutputFormats.Get "RSS" }}
+    {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{- end }}
+    {{- range $pages }}
+    {{- $content := .Content -}}
+    {{- if eq .Type "photos" -}}
+      {{- $photos := "" -}}
+      {{- range .Resources.ByType "image" -}}
+        {{- /* Same sizes as the album page, so no extra images are generated */ -}}
+        {{- $size := "350x q100" -}}
+        {{- if in .Name "Pano" }}{{ $size = "700x q100" }}{{ end -}}
+        {{- $image := .Resize $size -}}
+        {{- $photos = printf `%s<p><a href="%s"><img src="%s" width="%d" height="%d" alt=""></a></p>` $photos .Permalink $image.Permalink $image.Width $image.Height -}}
+      {{- end -}}
+      {{- with .Params.location }}{{ $content = printf "<p><em>%s</em></p>%s" (. | htmlEscape) $content }}{{ end -}}
+      {{- $content = printf "%s%s" $content $photos -}}
+      {{- with .Params.footer }}{{ $content = printf "%s<p><em>%s</em></p>" $content (. | htmlEscape) }}{{ end -}}
+    {{- end -}}
+    {{- /* Make root-relative links absolute, since feed readers may not resolve them */ -}}
+    {{- $content = replaceRE `(src|href|poster)="/([^/"])` (printf `${1}="%s/${2}` $baseURL) $content }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <guid>{{ .Permalink }}</guid>
+      {{- range .Params.tags }}
+      <category>{{ . }}</category>
+      {{- end }}
+      <description>{{ $content | html }}</description>
+    </item>
+    {{- end }}
+  </channel>
+</rss>
