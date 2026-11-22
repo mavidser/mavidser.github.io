@@ -4,6 +4,7 @@ title = "Sid Verma"
 theme = "rocinante-2"
 paginate = 9999
 summaryLength = 0
+buildFuture = true
 
 [markup]
   [markup.highlight]
