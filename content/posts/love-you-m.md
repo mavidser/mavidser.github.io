@@ -1,5 +1,5 @@
 ---
-title: Tell me why avoidance is not a good strategy grief dealing strategy
+title: Tell me why avoidance is not a good grief dealing strategy
 date: 2026-11-23
 tags: ["personal"]
 ---
